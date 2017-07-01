@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="smartbreachapp" class="app" ng-strict-di>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE; IE=9; IE=8; IE=7" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title ng-bind="models.title"></title>
+    <script>
+		function BoostrapRequestContext() {
+			return  @Html.Raw(ViewBag.BoostrapJson);
+		}
+    </script>
+    @AssetLoader.Stylesheet("vendor.css", folder: "css")
+    @AssetLoader.Stylesheet("app.css", folder: "css", preventUnbundle: true)
+</head>
+<body>
+    @RenderBody()
+    @AssetLoader.Script("vendor.js", folder: "js", fallbackCheck: "typeof angular === 'undefined'")
+    @AssetLoader.Script("app.js", folder: "js", fallbackCheck: "window.jsLoaded !== true")
+</body>
+</html>

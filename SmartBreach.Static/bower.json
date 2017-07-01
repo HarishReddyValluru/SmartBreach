@@ -1,0 +1,34 @@
+{
+  "name": "smartbreach",
+  "description": "Employee Benefits - Admin Portal",
+  "authors": [
+    "Robert Bune <robert.bune@aonhewitt.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.2",
+    "angular-animate": "1.6.2",
+    "angular-auto-validate": "1.19.6",
+    "angular-bootstrap": "^2.5.0",
+    "angular-loading-bar": "0.6.0",
+    "angular-local-storage": "0.2.2",
+    "angular-resource": "1.6.2",
+    "angular-sanitize": "1.6.2",
+    "angular-ui-router": "0.4.2",
+    "bootstrap": "3.3.7",
+    "components-font-awesome": "4.7.0",
+    "fineuploader-dist": "fine-uploader#5.1.3",
+    "jquery": "2.2.4",
+    "jquery.filedownload": "jquery-file-download#1.4.3",
+    "ng-idle": "angular-idle#1.3.2",
+    "toastr": "2.1.0",
+    "underscore": "1.7.0"
+  }
+}

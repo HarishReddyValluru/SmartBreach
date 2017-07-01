@@ -1,0 +1,59 @@
+﻿/*Confirmation box styles starts here*/
+
+.modal-dialog {
+    .modal-content {
+        border-radius: 0;
+        background: white;
+        border: 0;
+        .modal-body {
+            
+        }
+    }
+    .modal-header {
+        padding-top: 8px;
+        background: #337ab7;
+        height: 40px;
+        border-bottom: 0;
+        h3 {
+            font-family: sans-serif;
+        }
+        h3,
+        h4 {
+            color: white;
+        }
+    }
+    .modal-footer {
+        border-top: 0;
+        padding-bottom: 20px;
+    }
+}
+.close {
+    margin-top: 0px;
+    color: white;
+    opacity: 1;
+    font-weight: normal;
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        color: #337ab7;
+        opacity: 1;
+    }
+}
+&.declare-event {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                margin-top: 0;
+                padding-top: 0;
+            }
+            .modal-footer {
+                padding-bottom: 0;
+                padding-right: 0;
+                .btn-default {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

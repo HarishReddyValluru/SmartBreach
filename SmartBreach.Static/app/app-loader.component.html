@@ -1,0 +1,6 @@
+<div ng-switch="$ctrl.status" style="height: 100%; width: 100%">
+    <h1 ng-switch-when="Error">OMG, It's not working!</h1>
+    <h1 ng-switch-when="Loading">Please Wait...</h1>
+    <div ng-switch-when="Loaded" style="height: 100%; width: 100%" ng-transclude></div>
+    <h1 ng-switch-default>Staring...</h1>
+</div>
