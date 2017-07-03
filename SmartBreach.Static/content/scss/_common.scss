@@ -11,6 +11,15 @@ table{
 	}
 }
 
+.ui-iconpicker{
+	button{
+		width: 70px;
+		i{
+			padding-right: 20px;
+		}
+	}
+}
+
 .open-picker{
 	display: block !important;
 	width: 500px;

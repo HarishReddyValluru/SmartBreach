@@ -79,6 +79,7 @@ angular.module('smartbreachapp')
         }
         $scope.$watch("iconClass", function () {
             angular.element(".ui-iconpicker ul").removeClass('open-picker');
+            angular.element(".icon-name").text($scope.iconClass);
         });
     }
 });
