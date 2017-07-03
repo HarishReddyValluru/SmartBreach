@@ -11,4 +11,13 @@ table{
 	}
 }
 
-/*Added by Harish*/
+.open-picker{
+	display: block !important;
+	width: 500px;
+	height: 300px;
+    overflow-y: scroll;
+}
+
+.icon-buttons{
+	float:left;
+}

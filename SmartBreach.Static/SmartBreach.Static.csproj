@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="app\app-loader.component.html" />
     <Content Include="app\app-loader.component.js" />
+    <Content Include="app\common\directives\iconPicker.directive.js" />
     <Content Include="app\common\services\api-resource.factory.js" />
     <Content Include="app\common\services\giConstant.factory.js" />
     <Content Include="app\common\services\navigation.service.js" />
@@ -124,7 +125,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59223</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
