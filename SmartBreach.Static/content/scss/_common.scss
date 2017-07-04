@@ -1,4 +1,6 @@
-﻿.table-padding{
+﻿
+/* Table Design CSS */
+.table-padding{
 	padding: 10px 0px;
 }
 
@@ -11,6 +13,8 @@ table{
 	}
 }
 
+
+/* UI Icon Picker CSS */
 .ui-iconpicker{
 	button{
 		width: 70px;
@@ -22,7 +26,7 @@ table{
 
 .open-picker{
 	display: block !important;
-	width: 500px;
+	width: 510px;
 	height: 300px;
     overflow-y: scroll;
 }
