@@ -4,14 +4,15 @@
     angular.module('smartbreachapp.pages')
         .component('smartItems', {
             templateUrl: '/static/app/modules/smartItems/layout/smartItems.html',
-            controller: ['$scope', '$uibModal', 'modalConfirmService', controller],
+            controller: ['$scope', '$uibModal', '$state', 'modalConfirmService', controller],
             controllerAs: 'vm'
         });
 
-    function controller($scope, $uibModal, modalConfirmService) {
+    function controller($scope, $uibModal, $state, modalConfirmService) {
         var vm = this;
         vm.navigationMode = "horizontal";
         vm.openModalPopup = openModalPopup;
+        vm.openTabStructureModalPopup = openTabStructureModalPopup;
         vm.openConfirmationPopup = openConfirmationPopup;
         vm.toastrSuccess = toastrSuccess;
         vm.toastrError = toastrError;
@@ -30,6 +31,10 @@
             }, function () {
 
             });
+        }
+
+        function openTabStructureModalPopup() {
+            $state.go('tabstructure');
         }
 
         function openConfirmationPopup() {

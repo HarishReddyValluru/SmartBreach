@@ -78,9 +78,12 @@
     <Content Include="app\modules\formControls\formControls.component.js" />
     <Content Include="app\modules\formControls\formControls.service.js" />
     <Content Include="app\modules\formControls\layout\formControls.html" />
-    <Content Include="app\modules\modalPopup\layout\modal-confirm.html" />
-    <Content Include="app\modules\modalPopup\modal-confirm.controller.js" />
-    <Content Include="app\modules\modalPopup\modalConfirm.service.js" />
+    <Content Include="app\modules\modalConfirm\layout\modal-confirm.html" />
+    <Content Include="app\modules\modalConfirm\modal-confirm.controller.js" />
+    <Content Include="app\modules\modalConfirm\modalConfirm.service.js" />
+    <Content Include="app\modules\modalTabStructure\layout\modal-tab-structure.html" />
+    <Content Include="app\modules\modalTabStructure\modal-tab-structure.component.js" />
+    <Content Include="app\modules\modalTabStructure\modal-tab-structure.route.js" />
     <Content Include="app\modules\smartItems\layout\smartItems.html" />
     <Content Include="app\modules\smartItems\smartItems.component.js" />
     <Content Include="content\css\bootstrap.css" />
@@ -111,9 +114,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bower_components\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

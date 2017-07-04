@@ -28,7 +28,7 @@
                 options.isConfirm = options.isConfirm || true;
 
                 var modalInstance = $uibModal.open({
-                    templateUrl: '/static/app/modules/modalPopup/layout/modal-confirm.html',
+                    templateUrl: '/static/app/modules/modalConfirm/layout/modal-confirm.html',
                     controller: 'ModalConfirm',
                     resolve: {
                         text: function () {

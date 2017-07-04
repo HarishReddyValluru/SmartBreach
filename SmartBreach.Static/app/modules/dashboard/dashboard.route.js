@@ -30,6 +30,6 @@
                 url: "/SmartItems",
                 template: "<smart-items></smart-items>"
             })
+
     }
 })();
-
