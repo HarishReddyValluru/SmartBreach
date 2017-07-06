@@ -24,7 +24,7 @@
 
         vm.menus = [
             {
-                id: 'formBuilder', name: 'Form Builder', state: 'tabstructure.formbuilder', cssClass: 'active', hasChildMenus: false, toOpenInNewWindow: false
+                id: 'formBuilder', name: 'Form Builder', state: 'tabstructure.formbuilder', cssClass: 'active-tab', hasChildMenus: false, toOpenInNewWindow: false
             },
             {
                 id: 'formcontrols', name: 'Form Controls', state: 'tabstructure.formcontrols', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
