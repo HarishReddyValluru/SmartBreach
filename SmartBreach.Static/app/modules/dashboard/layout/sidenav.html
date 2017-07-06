@@ -1,10 +1,10 @@
 ﻿<div class="mainmenu">
     <div ng-repeat="menu in vm.menus" class="{{menu.cssClass}}" ng-class="{'horzontal-nav': vm.navigationMode == 'horizontal'}">
-        <div class="menu-tab" ng-if="!menu.hasChildMenus" ng-click="vm.smartNavigationService.redirectToState(menu.state, menu.toOpenInNewWindow, $event)">{{menu.name}}</div>
+        <div class="menu-tab" ng-if="!menu.hasChildMenus" ng-click="vm.smartNavigationService.redirectToState(menu, menu.toOpenInNewWindow, $event)">{{menu.name}}</div>
         <div id="{{menu.id}}_btn" ng-if="menu.hasChildMenus" aria-expanded="false" data-toggle="collapse" data-target="#{{menu.id}}_submenu">{{menu.name}}<i class="fa fa-caret-down pull-right"></i></div>
         <ul class="collapse submenu" ng-if="menu.hasChildMenus" id="{{menu.id}}_submenu" aria-labelledby="{{menu.id}}_btn" role="menu">
             <li role="presentation" ng-repeat="childMenu in menu.childMenus" class="{{childMenu.cssClass}}">
-                <div class="sub-menu-tab" ng-click="vm.smartNavigationService.redirectToState(childMenu.state, childMenu.toOpenInNewWindow, $event)">{{childMenu.name}}</div>
+                <div class="sub-menu-tab" ng-click="vm.smartNavigationService.redirectToState(childMenu, childMenu.toOpenInNewWindow, $event)">{{childMenu.name}}</div>
             </li>
         </ul>
     </div>

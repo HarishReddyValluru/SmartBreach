@@ -16,7 +16,7 @@
         var vm = this;
         vm.cancel = cancel;
         vm.navigationMode = "horizontal";
-
+        
         function cancel() {
             vm.modalInstance.close();
             $state.go('dashboard.smartitems');
@@ -32,8 +32,6 @@
             {
                 id: 'smartitems', name: 'Smart Items', state: 'tabstructure.smartitems', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
             }];
-
-
     }
 
 })();

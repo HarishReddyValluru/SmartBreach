@@ -22,7 +22,7 @@
             })
             .state('dashboard.formcontrols',
             {
-                url: "/FormControls",
+                url: "/FormControls/:employeeId",
                 template: "<form-controls></form-controls>"
             })
             .state('dashboard.smartitems',

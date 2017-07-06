@@ -248,3 +248,10 @@ gulp.task('manifest:clean', function () {
 
 
 
+/* Watch */
+gulp.task('watch', function () {
+    gulp.watch([config.app.js.src, config.app.templates.src], ['js']);
+    gulp.watch(config.app.css.src, ['css']);
+    gulp.watch(config.app.fonts.src, ['fonts']);
+    gulp.watch(config.app.images.src, ['images']);
+});

@@ -34,7 +34,7 @@
         }
 
         function openTabStructureModalPopup() {
-            $state.go('tabstructure');
+            $state.go('tabstructure.formbuilder', { employeeId: 53 });
         }
 
         function openConfirmationPopup() {

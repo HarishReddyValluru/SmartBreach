@@ -13,15 +13,15 @@
             redirectToState: redirectToState
         };
 
-        function redirectToState(state, openInNewWindow, $event) {
+        function redirectToState(item, openInNewWindow, $event) {
             angular.element(".menu-tab, .sub-menu-tab").removeClass('active-tab');
             angular.element($event.target).addClass('active-tab');
             if (openInNewWindow) {
-                var url = $state.href(state);
+                var url = $state.href(item.state, item.stateParams);
                 $window.open(url, '_blank', 'status=0,toolbar=0,resizable=1');
             }
             else {
-                $state.go(state);
+                $state.go(item.state, item.stateParams);
             }
         }
 

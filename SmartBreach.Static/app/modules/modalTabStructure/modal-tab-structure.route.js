@@ -8,7 +8,7 @@
 
         $stateProvider
             .state('tabstructure', {
-                url: "/TabStructure",
+                url: "/TabStructure/:employeeId",
                 parent: 'dashboard.smartitems',
                 resolve: {
                     modalInstance: ['$uibModal', function ($uibModal) {
@@ -32,7 +32,7 @@
             })
             .state('tabstructure.formcontrols',
             {
-                url: "/FormControls",
+                url: "/FormControls/:employeeId",
                 views: {
                     'tabbody@': {
                         template: "<form-controls></form-controls>"

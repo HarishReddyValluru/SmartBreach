@@ -6,10 +6,10 @@
         .component('formControls', {
             templateUrl: '/static/app/modules/formControls/layout/formControls.html',
             controllerAs: 'vm',
-            controller: ['$q', '$scope', '$rootScope', '$window', '$cacheFactory', '$timeout', '$filter', '$uibModal', 'formControlService', 'modalConfirmService', controller]
+            controller: ['$q', '$scope', '$rootScope', '$window', '$stateParams', '$cacheFactory', '$timeout', '$filter', '$uibModal', 'formControlService', 'modalConfirmService', controller]
         });
 
-    function controller($q, $scope, $rootScope, $window, $cacheFactory, $timeout, $filter, $uibModal, formControlService, modalConfirmService) {
+    function controller($q, $scope, $rootScope, $window, $stateParams, $cacheFactory, $timeout, $filter, $uibModal, formControlService, modalConfirmService) {
 
         var vm = this;
         vm.query = _query;
@@ -20,6 +20,8 @@
         vm.getFormData = _getFormData;
         vm.singleCustomList = _singleCustomList;
         vm.multipleCustomList = _multipleCustomList;
+
+        toastr.success( "StateParam Parameter :   " + $stateParams.employeeId);
 
         vm.gender = [
             { id: 1, type: 'Male' },
