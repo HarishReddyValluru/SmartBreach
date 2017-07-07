@@ -35,10 +35,10 @@
             //alert(current);
             if (current != next) {
                 if ($scope.formFirstPage.$dirty) {
-                    alert(1);
+                    //alert(1);
                 }
                 else {
-                    alert(2);
+                    //alert(2);
                 }
             }
         });
