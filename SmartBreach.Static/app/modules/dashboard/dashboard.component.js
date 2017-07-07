@@ -12,7 +12,7 @@
 
         var vm = this;
         vm.scope = $scope;
-        vm.tgState = false;
+        vm.tgState = true;
 
         vm.menus = [
             {
