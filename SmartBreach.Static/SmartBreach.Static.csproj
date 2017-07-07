@@ -65,7 +65,12 @@
     <Content Include="app\common\services\giConstant.factory.js" />
     <Content Include="app\common\services\navigation.service.js" />
     <Content Include="app\common\services\pageContext.service.js" />
+    <Content Include="app\common\services\sharedProperties.service.js" />
     <Content Include="app\common\services\smartNavigation.service.js" />
+    <Content Include="app\modules\angularExamples\first-page.component.js" />
+    <Content Include="app\modules\angularExamples\layout\first-page.html" />
+    <Content Include="app\modules\angularExamples\layout\second-page.html" />
+    <Content Include="app\modules\angularExamples\second-page.component.js" />
     <Content Include="app\modules\appInformation\app-information.component.js" />
     <Content Include="app\modules\appInformation\layout\app-information.html" />
     <Content Include="app\modules\dashboard\sidenav.directive.js" />

@@ -30,6 +30,11 @@
                 url: "/SmartItems",
                 template: "<smart-items></smart-items>"
             })
+            .state('dashboard.angularexamples',
+            {
+                url: "/AngularExamples",
+                template: "<angular-examples></angular-examples>"
+            })
 
     }
 })();

@@ -1,0 +1,54 @@
+﻿<div>
+
+    <div class="col-lg-12" style="margin-top: 2px">
+        <input type="button" class="btn btn-primary" value="RUN" ng-click="vm.proceed();" />
+    </div>
+    <div class="col-lg-12" style="margin-top: 13px">
+        <table>
+            <tr>
+                <td>
+                    <span>$window.sessionStorage</span>
+                </td>
+                <td>
+                    <input type="text" ng-model="vm.sessionStorageValue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Share properties between controllers</span>
+                </td>
+                <td>
+                    <input type="text" ng-model="vm.sharedPropertyValue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>$broadcast</span>
+                </td>
+                <td>
+                    <input type="text" ng-model="vm.broadcastPropertyValue" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>$emit</span>
+                </td>
+                <td>
+                    <input type="text" ng-model="vm.emitProperty" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Search</span>
+                </td>
+                <td>
+                    <ul ng-model="vm.searchText" ng-repeat="country in vm.countries">
+                        <li>{{country.name}}</li>
+                    </ul>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>

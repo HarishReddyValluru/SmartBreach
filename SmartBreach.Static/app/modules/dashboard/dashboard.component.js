@@ -28,6 +28,9 @@
             },
             {
                 id: 'smartItems', name: 'Smart Items', state: 'dashboard.smartitems', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
+            },
+            {
+                id: 'angularExamples', name: 'Angular Examples', state: 'dashboard.angularexamples', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
             }
         ];
 
