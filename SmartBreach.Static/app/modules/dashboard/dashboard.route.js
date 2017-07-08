@@ -6,7 +6,7 @@
 
     function config($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.when('/Dashboard', '/Dashboard/FormBuilder');
+        $urlRouterProvider.when('/Dashboard', '/Dashboard/SmartItems');
 
         $stateProvider
             .state('dashboard',
@@ -14,6 +14,11 @@
                 abstract: true,
                 url: "/Dashboard",
                 template: '<smart-dashboard></smart-dashboard>'
+            })
+            .state('dashboard.smartitems',
+            {
+                url: "/SmartItems",
+                template: "<smart-items></smart-items>"
             })
             .state('dashboard.formbuilder',
             {
@@ -24,11 +29,6 @@
             {
                 url: "/FormControls/:employeeId",
                 template: "<form-controls></form-controls>"
-            })
-            .state('dashboard.smartitems',
-            {
-                url: "/SmartItems",
-                template: "<smart-items></smart-items>"
             })
             .state('dashboard.angularexamples',
             {
