@@ -58,7 +58,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app-loader.component.html" />
     <Content Include="app\app-loader.component.js" />
     <Content Include="app\common\directives\iconPicker.directive.js" />
     <Content Include="app\common\services\api-resource.factory.js" />
@@ -91,6 +90,7 @@
     <Content Include="app\modules\modalTabStructure\modal-tab-structure.route.js" />
     <Content Include="app\modules\smartItems\layout\smartItems.html" />
     <Content Include="app\modules\smartItems\smartItems.component.js" />
+    <Content Include="app\app-loader.html" />
     <Content Include="content\css\bootstrap.css" />
     <Content Include="gulpfile.js" />
     <Content Include="karma.conf.js" />
@@ -102,6 +102,7 @@
     <Content Include="content\scss\_navigation.scss" />
     <Content Include="content\scss\_modalPopup.scss" />
     <Content Include="content\scss\_common.scss" />
+    <Content Include="content\scss\_appLoader.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

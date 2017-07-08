@@ -1,6 +1,6 @@
 <div ng-switch="$ctrl.status">
-    <div class="loader-container">
-        <div ng-if="Loading || Error" class="loader">
+    <div ng-show="$ctrl.status=='Loading' || $ctrl.status=='Error'" class="loader-container">
+        <div class="loader">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
@@ -15,5 +15,5 @@
             </center>
         </div>
     </div>
-    <div ng-switch-when="Loaded" style="height: 100%; width: 100%" ng-transclude></div>
+    <div ng-show="$ctrl.status=='Loaded'" style="height: 100%; width: 100%" ng-transclude></div>
 </div>

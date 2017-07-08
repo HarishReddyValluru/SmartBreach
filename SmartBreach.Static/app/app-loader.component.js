@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('smartbreachapp').component('appLoader', {
-            templateUrl: '/static/app/app-loader.component.html',
+            templateUrl: '/static/app/app-loader.html',
             transclude: true,
             controller: ['$scope', '$timeout', controller]
         });
@@ -15,7 +15,7 @@
 
         $timeout(function () {
             $ctrl.status = "Loaded";
-        }, 1000);
+        }, 1500);
 
     }
 
