@@ -1,20 +1,26 @@
-﻿
-<div class="form-builder">
-    <div class="col-lg-12" ng-repeat="formBuild in vm.formBuilder">
-        <div class="pull-left form-control-div">
-            <input type="text" ng-model="formBuild.name" class="form-control" />
-        </div>
-        <div class="pull-left form-control-div">
-            <select ng-model="formBuild.country" ng-options="country.name as country.name for country in vm.countries" class="form-control">
-                <option>select</option>
-            </select>
-        </div>
+﻿<div class="form-builder">
+    <div class="col-lg-12 builder-padding form-control-div" ng-repeat="formBuild in vm.formBuilder">
+        <center>
+            <div class="form-control-div  col-lg-6">
+                <input type="text" ng-model="formBuild.name" class="form-control" />
+            </div>
+            <div class="form-control-div  col-lg-6">
+                <select ng-model="formBuild.country" ng-options="country.name as country.name for country in vm.countries" class="form-control">
+                    <option>select</option>
+                </select>
+            </div>
+        </center>
     </div>
     <div class="col-lg-12 form-control-div">
-        <input type="button" value="Add Row" ng-click="vm.addRow();" />
-        <input type="button" value="Delete Row" ng-click="vm.removeRow();" />
+        <center>
+            <input type="button" class="btn btn-primary" value="Add Row" ng-click="vm.addRow();" />
+            <input type="button" class="btn btn-danger" value="Delete Row" ng-click="vm.removeRow();" />
+        </center>
     </div>
-    <input type="button" value="GET DATA" ng-click="vm.getFormBuilderData();" />
-    
+    <div class="col-lg-12 form-control-div">
+        <center>
+            <input type="button" class="btn btn-primary" value="GET DATA" ng-click="vm.getFormBuilderData();" />
+        </center>
+    </div>
 </div>
 
