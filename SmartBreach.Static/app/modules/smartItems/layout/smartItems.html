@@ -50,4 +50,13 @@
             <ui-iconpicker ng-model="iconClass" groups="font-awesome"></ui-iconpicker>&nbsp;&nbsp;&nbsp;<span class="icon-name"></span>
         </div>
     </div>
+    <div class="col-lg-12 table-padding">
+        <div class="col-lg-4">
+            <span>Animated Search</span>
+        </div>
+        <div class="col-lg-8">
+            <input type="text" class="form-control" ng-model="searchString">
+            <div ng-repeat="person in people | filter:searchString | orderBy:sort" class="animated-search">{{ person.first + ' ' + person.last }}</div>
+        </div>
+    </div>
 </div>

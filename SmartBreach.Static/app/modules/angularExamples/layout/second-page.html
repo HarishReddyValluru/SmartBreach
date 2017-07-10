@@ -37,17 +37,6 @@
                     <input type="text" ng-model="vm.emitProperty" class="form-control" />
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <span>Search</span>
-                </td>
-                <td>
-                    <input type="text" ng-model="vm.searchText" class="form-control" />
-                    <ul ng-repeat="country in vm.countries | filter:vm.searchText">
-                        <li>{{country.name}}</li>
-                    </ul>
-                </td>
-            </tr>
 
         </table>
     </div>
