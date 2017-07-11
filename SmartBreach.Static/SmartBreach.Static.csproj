@@ -72,6 +72,10 @@
     <Content Include="app\modules\angularExamples\second-page.component.js" />
     <Content Include="app\modules\appInformation\app-information.component.js" />
     <Content Include="app\modules\appInformation\layout\app-information.html" />
+    <Content Include="app\modules\customDirectives\directiveFuntionalities.component.js" />
+    <Content Include="app\modules\customDirectives\directives\card-view.directive.js" />
+    <Content Include="app\modules\customDirectives\directives\directiveFuntionalities.directive.js" />
+    <Content Include="app\modules\customDirectives\layout\directiveFuntionalities.html" />
     <Content Include="app\modules\dashboard\sidenav.directive.js" />
     <Content Include="app\modules\dashboard\dashboard.component.js" />
     <Content Include="app\modules\dashboard\dashboard.route.js" />

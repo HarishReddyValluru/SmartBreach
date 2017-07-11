@@ -31,7 +31,14 @@
             },
             {
                 id: 'angularExamples', name: 'Angular Examples', state: 'dashboard.angularexamples', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
-            }
+            },
+            {
+                id: 'customDirectives', name: 'Custom Directives', cssClass: '', hasChildMenus: true, toOpenInNewWindow: false,
+                childMenus: [
+                    { name: 'Directive Functionalities', state: 'dashboard.directivefunctionalities', cssClass: '', toOpenInNewWindow: false },
+                    { name: 'Card View', state: 'dashboard.cardview', cssClass: '', toOpenInNewWindow: false }
+                ]
+            },
         ];
 
     }

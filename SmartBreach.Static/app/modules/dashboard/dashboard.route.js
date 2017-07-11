@@ -35,6 +35,11 @@
                 url: "/AngularExamples",
                 template: "<angular-examples></angular-examples>"
             })
+            .state('dashboard.directivefunctionalities',
+            {
+                url: "/DirectiveFunctionalities",
+                template: "<directive-functionalities></directive-functionalities>"
+            })
 
     }
 })();

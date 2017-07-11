@@ -5,7 +5,7 @@
 }
 
 table {
-    width: 100%;
+    width: 98%;
 
     tr td {
         padding: 10px 20px;
@@ -40,7 +40,14 @@ table {
     border: 1px solid green;
 }
 
+.surround{
+	border: 1px solid #999;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+}
 
+
+/*--Animated Search CSS--*/
 .animated-search {
     padding: 1.5em;
     height: 1.5em;

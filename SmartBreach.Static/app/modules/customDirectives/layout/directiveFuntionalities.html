@@ -1,0 +1,49 @@
+﻿<div class="col-lg-12">
+    <table>
+        <tr>
+            <td>
+                <h3>scope : false(default)</h3>
+            </td>
+            <td>
+                <div class="surround">
+                    <h4>Product: {{product}}</h4>
+                    Change Product Name : <input type='text' class="form-control" ng-model='product' />
+                </div>
+                <div class="surround">
+                    <directive-scope-false></directive-scope-false>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>scope : true</h3>
+                <span data-toggle="tooltip" title="There is one thing to note here: If the content in the text box in the header section is changed first, then this change is also reflected inside the directive. However, after the movie title in the directive is changed, any changes made to the heading text no longer affect the directive content. The explanation for this is that the ng-model creates a new movie variable only after the text box value is changed. Until then, it refers to the value in the parent scope.">Important Points</span>
+            </td>
+            <td>
+                <div class="surround">
+                    <h4>Product: {{product1}}</h4>
+                    Change Product Name : <input type='text' class="form-control" ng-model='product1' />
+                </div>
+                <div class="surround">
+                    <directive-scope-true></directive-scope-true>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>scope : { }(Isolated Scope)</h3>
+                <span>Important Points</span>
+            </td>
+            <td>
+                <div class="surround">
+                    <directive-scope-isolated one-way-binding="{{vm.oneWayData}}" two-way-binding="vm.twoWayBinding" display="vm.display()"></directive-scope-isolated>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
