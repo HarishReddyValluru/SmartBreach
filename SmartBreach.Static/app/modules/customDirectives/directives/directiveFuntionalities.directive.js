@@ -45,12 +45,12 @@
                 },
                 template: "<h4>‘@’ – Text binding / one-way binding</h4><br/><span>{{oneWayBinding}}</span><br/><h4>‘=’ – Direct model binding / two-way binding</h4><br/><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><br/><button ng-click='viewDisplay()'>View Product</button>",
                 controller: ['$scope', controller]
-
             }
 
             function controller($scope) {
-                $scope.viewDisplay = function () {
-                    $scope.methodToCall({ value: 'Harish Reddy' });
+                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+                vm.viewDisplay = function () {
+                    vm.methodToCall({ value: 'Harish Reddy' });
                 }
             }
 
