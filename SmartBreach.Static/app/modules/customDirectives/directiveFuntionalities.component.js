@@ -22,8 +22,8 @@
         });
 
 
-        function display() {
-            alert("Product : ");
+        function display(value) {
+            alert("Product : " + value);
         }
 
     }
