@@ -43,14 +43,14 @@
                     twoWayBinding: '=',
                     methodToCall: '&method'
                 },
-                template: "<h4>‘@’ – Text binding / one-way binding</h4><br/><span>{{oneWayBinding}}</span><br/><h4>‘=’ – Direct model binding / two-way binding</h4><br/><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><br/><button ng-click='viewDisplay()'>View Product</button>",
+                template: "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button>",
                 controller: ['$scope', controller]
             }
 
             function controller($scope) {
                 var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
                 vm.viewDisplay = function () {
-                    vm.methodToCall({ value: 'Harish Reddy' });
+                    vm.methodToCall({ value: 'Returned from directive' });
                 }
             }
 

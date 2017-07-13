@@ -21,9 +21,8 @@
             placement: 'right'
         });
 
-
         function display(value) {
-            alert("Product : " + value);
+            toastr.success(value);
         }
 
     }
