@@ -8,18 +8,22 @@
 
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
+
 .main-content {
+	width: 96.666667% !important;
+	padding-right: 0px !important;
+
     [ui-view] {
-        position: fixed;
+       /* position: fixed;*/
         bottom: 0;
         top: 65px;
-        width: 75%;
+        width: 100%;
         overflow: auto;
         padding: 10px 0px 10px 0px;
     }
 
     [ui-view].ng-enter, [ui-view].ng-leave {
-        position: fixed;
+        /* position: fixed;*/
         -webkit-transition: all .3s ease-in-out;
         -moz-transition: all .3s ease-in-out;
         -o-transition: all .3s ease-in-out;
