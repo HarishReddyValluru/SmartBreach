@@ -66,6 +66,7 @@
     <Content Include="app\common\services\pageContext.service.js" />
     <Content Include="app\common\services\sharedProperties.service.js" />
     <Content Include="app\common\services\smartNavigation.service.js" />
+    <Content Include="app\common\ui-bootstrap-tpls-0.12.0.js" />
     <Content Include="app\modules\angularExamples\first-page.component.js" />
     <Content Include="app\modules\angularExamples\layout\first-page.html" />
     <Content Include="app\modules\angularExamples\layout\second-page.html" />
