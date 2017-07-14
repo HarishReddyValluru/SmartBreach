@@ -21,11 +21,21 @@
         vm.singleCustomList = _singleCustomList;
         vm.multipleCustomList = _multipleCustomList;
 
-        toastr.success( "StateParam Parameter :   " + $stateParams.employeeId);
+        toastr.success("StateParam Parameter :   " + $stateParams.employeeId);
 
         vm.gender = [
             { id: 1, type: 'Male' },
             { id: 2, type: 'Female' }
+        ];
+
+        vm.register = {
+            multiSelectModel: []
+        }
+
+        vm.multiSelectData = [
+            { id: 1, label: "David" },
+            { id: 2, label: "Jhon" },
+            { id: 3, label: "Danny" }
         ];
 
         vm.countries = [

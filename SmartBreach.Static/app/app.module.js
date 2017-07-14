@@ -17,7 +17,7 @@
     //'ui.bootstrap' - injected when issue with modal popup
 
     angular.module('smartbreachapp.dashboard', []);
-    angular.module('smartbreachapp.pages', ['checklist-model']);
+    angular.module('smartbreachapp.pages', ['checklist-model', 'angularjs-dropdown-multiselect']);
 
     angular
     .module('smartbreachapp')
