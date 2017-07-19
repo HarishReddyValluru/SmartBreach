@@ -58,7 +58,7 @@
             return directive;
         });
 
-        angular.module("ui.directive.templates", []).run(["$templateCache", function ($templateCache) {
+        angular.module("smartbreachapp.templates", []).run(["$templateCache", function ($templateCache) {
             $templateCache.put("template/scope/isolatedscope.html",
               "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button>" +
               "");

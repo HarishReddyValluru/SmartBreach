@@ -11,13 +11,13 @@
              'smartbreachapp.pages',
              'ngResource',
              'ngAnimate',
-             'ui.directive.templates'
+             'smartbreachapp.templates'
     ]);
 
     //'ui.bootstrap' - injected when issue with modal popup
 
     angular.module('smartbreachapp.dashboard', []);
     angular.module('smartbreachapp.pages', ['checklist-model', 'angularjs-dropdown-multiselect']);
-    angular.module("ui.directive.templates", ['template/scope/isolatedscope.html']);
+    angular.module("smartbreachapp.templates", ['template/scope/isolatedscope.html']);
 
 })(window);
