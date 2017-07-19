@@ -1,6 +1,22 @@
 ﻿(function () {
     'use strict';
 
+    angular
+    .module('smartbreachapp.pages')
+    .directive('directiveTransclude', function () {
+        var directive = {
+            restrict: 'E',
+            transclude: true,
+            template: '<div style="cursor: pointer;padding: 20px; background-color: #ccc;">' +
+                        '<b>This is directive template</b>&nbsp;&nbsp;&nbsp;&nbsp;' +
+                          '<ng-transclude>' +
+                          '</ng-transclude>' +
+                        '</div>'
+        }
+
+        return directive;
+    });
+
     //scope: false(default)
     angular
         .module('smartbreachapp.pages')
