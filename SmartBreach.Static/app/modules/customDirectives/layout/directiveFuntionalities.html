@@ -64,6 +64,30 @@
                 </div>
             </td>
         </tr>
+        <tr>
+            <td>
+                <h3>Compile function</h3>
+            </td>
+            <td>
+                <div class="surround">
+                    <p>
+                        The compile function is used for template DOM manipulation and if you need to perform some common calculations for all references of a given directive. It executes in phase when Angular compiles your directive. Compile function doesn’t have scope. So if you have multiple usages of directive on the page the compile function will executes once. In addition the compile function must return link function, since the link attribute is ignored if the compile attribute is defined.
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Link function</h3>
+            </td>
+            <td>
+                <div class="surround">
+                    <p>
+                        The link function is normally used for registering DOM listeners, $watch expressions on the scope, manipulating of DOM for the current instance of the directive. This function executes in the linking phase, when the data from the $scope is attached to the function and then link function returns the linked html.
+                    </p>
+                </div>
+            </td>
+        </tr>
     </table>
 </div>
 
