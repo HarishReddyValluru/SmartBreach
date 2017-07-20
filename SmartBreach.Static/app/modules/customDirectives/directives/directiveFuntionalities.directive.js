@@ -57,11 +57,16 @@
                 scope: {
                     oneWayBinding: '@',
                     twoWayBinding: '=',
-                    methodToCall: '&method'
+                    methodToCall: '&method',
+                    customAttr: '=?'
                 },
                 templateUrl: 'template/scope/isolatedscope.html',
-                //template: "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button>",
-                controller: ['$scope', controller]
+                controller: ['$scope', controller],
+                link: function (scope, element, attrs) {
+                    scope.customAttr = "Attribute Data changed with link function";
+                    element.find('h4').css('color', 'steelblue');
+                    attrs.customAttr = 'Harish';
+                }
             }
 
             function controller($scope) {
@@ -76,7 +81,7 @@
 
         angular.module("smartbreachapp.templates", []).run(["$templateCache", function ($templateCache) {
             $templateCache.put("template/scope/isolatedscope.html",
-              "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button>" +
+              "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button><h4>Custom Attribute changes</h4><span>{{customAttr}}</span>" +
               "");
         }]);
 

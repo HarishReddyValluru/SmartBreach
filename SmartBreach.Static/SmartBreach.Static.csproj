@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app-loader.component.html" />
     <Content Include="app\app-loader.component.js" />
     <Content Include="app\common\directives\iconPicker.directive.js" />
     <Content Include="app\common\services\api-resource.factory.js" />
