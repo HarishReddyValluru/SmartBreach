@@ -112,4 +112,88 @@
           "");
     }]);
 
+    //Compile function
+    angular
+        .module('smartbreachapp.pages')
+        .directive('directiveCompile', function () {
+            var directive = {
+                restrict: 'E',
+                replace: false,
+                scope: {
+                    compileAttr: '=?'
+                },
+                template: '<h4>Compile Attribute changes</h4><div class="custom-div"><center><span>{{compileAttr}}</span></center></div>',
+                controller: ['$scope', controller],
+                compile: function (scope, element, attrs) {
+
+                    //==========Not accesible, as the scope is not available for compile - Then use pre and post========//
+                    //element.find('h4').css('color', 'steelblue');
+                    //attrs.customAttr = 'Harish';
+                    //scope.customAttr = "COMPILE - Attribute Data changed with compile function"; 
+
+                    //return {
+                    //    post: function (scope, element, attrs) {
+                    //        scope.customAttr = "COMPILE - Attribute Data changed with compile function"; 
+                    //    }
+                    //}
+
+                    return {
+                        pre: function (scope, element, attrs) {
+                            scope.compileAttr = "COMPILE - Attribute Data changed with compile function";
+                        }
+                    }
+
+                    //return function preLink(scope, element, attrs) {
+                    //    scope.customAttr = "COMPILE - Attribute Data changed with compile function"; 
+                    //}
+
+                    //return function postLink(scope, element, attrs) {
+                    //    element.find('h4').css('color', 'steelblue');
+                    //    scope.customAttr = "COMPILE - Attribute Data changed with compile function"; 
+                    //}
+                }
+            }
+
+            function controller($scope) {
+                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+            }
+
+            return directive;
+        });
+
+    //Link function
+    angular
+        .module('smartbreachapp.pages')
+        .directive('directiveLink', function () {
+            var directive = {
+                restrict: 'E',
+                replace: false,
+                scope: {
+                    linkAttr: '=?'
+                },
+                template: '<h4>{{linkheading}}</h4><div class="custom-div"><center><span>{{linkAttr}}</span></center></div>',
+                controller: ['$scope', controller],
+                link: function (scope, element, attrs) {
+                    scope.linkAttr = "LINK - Attribute Data changed with link function";
+
+                    element.find(".custom-div").css({ 'background-color': '#ccc', 'color': 'black' });
+
+                    element.on('click', function () {
+                        if (!element.find(".custom-div").hasClass("act"))
+                            element.find(".custom-div").addClass("act").css({ 'background-color': 'steelblue', 'color': 'white' });
+                        else
+                            element.find(".custom-div").removeClass("act").css({ 'background-color': '#ccc', 'color': 'black' });
+                    });
+
+                }
+            }
+
+            function controller($scope) {
+                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+                vm.linkheading = "Link attribute changes";
+            }
+
+            return directive;
+        });
+
 })();

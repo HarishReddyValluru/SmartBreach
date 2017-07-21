@@ -110,6 +110,7 @@
     <Content Include="content\scss\_common.scss" />
     <Content Include="content\scss\_appLoader.scss" />
     <Content Include="content\scss\_formBuilder.scss" />
+    <Content Include="content\scss\_bootstrapOverrides.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

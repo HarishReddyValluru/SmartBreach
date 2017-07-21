@@ -22,12 +22,7 @@
                 id: 'formBuilder', name: 'Form Builder', state: 'dashboard.formbuilder', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
             },
             {
-                id: 'formControls', name: 'Form Controls', cssClass: '', hasChildMenus: true, toOpenInNewWindow: false,
-                childMenus: [
-                    { name: 'Form Controls 4', state: 'dashboard.formbuilder', cssClass: '', toOpenInNewWindow: true },
-                    { name: 'Form Controls 5', state: 'dashboard.formcontrols', cssClass: '', toOpenInNewWindow: false, stateParams: { employeeId: 37 } },
-                    { name: 'Form Controls 6', state: 'dashboard.formbuilder', cssClass: '', toOpenInNewWindow: true }
-                ]
+                id: 'formControls', name: 'Form Controls', state: 'dashboard.formcontrols', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false
             },
             {
                 id: 'angularExamples', name: 'Angular Examples', state: 'dashboard.angularexamples', cssClass: '', hasChildMenus: false, toOpenInNewWindow: false

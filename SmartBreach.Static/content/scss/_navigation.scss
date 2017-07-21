@@ -9,7 +9,7 @@
     -webkit-transition: all 0.2s ease-in-out;
 }
 .content.sidenav-open {
-    padding-left: 300px;
+    padding-left: 20%;
 }
 .sidenav {
     width: 0px;
@@ -26,7 +26,7 @@
     z-index: 10;
 }
 .sidenav.open {
-    width: 300px;
+    width: 20%;
 }
 .navbar {
     z-index: 100;

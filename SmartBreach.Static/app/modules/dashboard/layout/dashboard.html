@@ -9,20 +9,22 @@
     </div>
 </div>
 
-<!--Side Navigation-->
-<div class="sidenav" ng-class="{open: vm.tgState}">
-    <smart-navigation menu-to-build="vm.menus"></smart-navigation>
-</div>
+<div>
+    <!--Side Navigation-->
+    <div class="sidenav" ng-class="{open: vm.tgState}">
+        <smart-navigation menu-to-build="vm.menus"></smart-navigation>
+    </div>
 
-<!--Main Content-->
-<div class="content app-content" ng-class="{'sidenav-open': vm.tgState}">
-    <div class="col-lg-12">
-        <div class="col-lg-1">
-            <hamburger-toggle state="vm.tgState" class="hamburger-toggle"></hamburger-toggle>
-        </div>
-        <div class="col-lg-11 main-content">
-            <div ui-view></div>
-            <!--<data-ui-view></data-ui-view>-->
+    <!--Main Content-->
+    <div class="content app-content" ng-class="{'sidenav-open': vm.tgState}">
+        <div class="col-lg-12">
+            <div class="col-lg-1">
+                <hamburger-toggle state="vm.tgState" class="hamburger-toggle"></hamburger-toggle>
+            </div>
+            <div class="col-lg-11 main-content">
+                <div ui-view></div>
+                <!--<data-ui-view></data-ui-view>-->
+            </div>
         </div>
     </div>
 </div>
