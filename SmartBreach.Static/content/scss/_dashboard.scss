@@ -14,9 +14,9 @@ to prevent collapsing during animation*/
 	padding-right: 0px !important;
 
     [ui-view] {
-			width: 100%;
+			width: 95%;
 			overflow: auto;
-			/*position: fixed;*/
+			position: fixed;
 			top: 65px;
 			bottom: 0;
 			transition: all 0.2s ease-in-out;
@@ -65,4 +65,8 @@ to prevent collapsing during animation*/
         -moz-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
+}
+
+.side-nav-active{
+    width: 75% !important;
 }

@@ -22,8 +22,7 @@
                 <hamburger-toggle state="vm.tgState" class="hamburger-toggle"></hamburger-toggle>
             </div>
             <div class="col-lg-11 main-content">
-                <div ui-view></div>
-                <!--<data-ui-view></data-ui-view>-->
+                <div ui-view ng-class="{'side-nav-active': vm.tgState}"></div>
             </div>
         </div>
     </div>
