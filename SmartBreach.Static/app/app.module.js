@@ -20,4 +20,17 @@
     angular.module('smartbreachapp.pages', ['checklist-model', 'angularjs-dropdown-multiselect']);
     angular.module("smartbreachapp.templates", ['template/scope/isolatedscope.html']);
 
+    // For RequestContext
+    angular
+    .module('smartbreachapp')
+    .constant('RequestContext', BoostrapRequestContext()) //bootstrap data from function written directly in page
+
+    .factory('appPathFactory', ['RequestContext', function appPathServiceFactory(RequestContext) {
+            return {
+                localPath: function () {
+                       return RequestContext.PathSPA;
+                   }
+            };
+        }])
+
 })(window);
