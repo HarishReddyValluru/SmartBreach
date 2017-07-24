@@ -61,43 +61,11 @@
                     customAttr: '=?'
                 },
                 templateUrl: 'template/scope/isolatedscope.html',
-                controller: ['$scope', controller],
-                compile: function (scope, element, attrs) {
-
-                    //element.find('h4').css('color', 'steelblue');
-                    //attrs.customAttr = 'Harish';
-
-                    //Not accesible, as the scope is not available for compile - Then use pre and post
-                    //scope.customAttr = "COMPILE - Attribute Data changed with link function"; 
-
-                    //return {
-                    //    post: function (scope, element, attrs) {
-                    //        scope.customAttr = "COMPILE - Attribute Data changed with link function"; 
-                    //    }
-                    //}
-
-                    return {
-                        pre: function (scope, element, attrs) {
-                            scope.customAttr = "COMPILE - Attribute Data changed with link function";
-                        }
-                    }
-
-                    //return function preLink(scope, element, attrs) {
-                    //    scope.customAttr = "COMPILE - Attribute Data changed with link function"; 
-                    //}
-
-                    //return function postLink(scope, element, attrs) {
-                    //    element.find('h4').css('color', 'steelblue');
-                    //    scope.customAttr = "COMPILE - Attribute Data changed with link function"; 
-                    //}
-                },
-                link: function (scope, element, attrs) {
-                    scope.customAttr = "LINK - Attribute Data changed with link function";
-                }
+                controller: ['$scope', controller]
             }
 
             function controller($scope) {
-                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+                var vm = this;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
                 vm.viewDisplay = function () {
                     vm.methodToCall({ value: 'Returned from directive' });
                 }
@@ -191,6 +159,38 @@
             function controller($scope) {
                 var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
                 vm.linkheading = "Link attribute changes";
+            }
+
+            return directive;
+        });
+
+    //bindToController
+    angular
+        .module('smartbreachapp.pages')
+        .directive('directiveBindtocontroller', function () {
+            var directive = {
+                restrict: 'E',
+                replace: false,
+                scope: {},
+                controller: ['$scope', controller],
+                controllerAs: 'vm',
+                bindToController:{
+                    bindtocontrollerAttr: '='
+                },
+                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>{{vm.bindtocontrollerText}}</span>',
+                link: function (scope, element, attrs) {
+                    
+                }
+            }
+
+            function controller($scope) {
+                var vm = this;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+
+                vm.$onInit = function () {
+                    vm.bindToControllerHeading = "bindToController text changes";
+                    vm.bindtocontrollerText = vm.bindtocontrollerAttr;
+                }
+                
             }
 
             return directive;
