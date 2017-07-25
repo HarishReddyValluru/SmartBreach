@@ -57,15 +57,14 @@
                 scope: {
                     oneWayBinding: '@',
                     twoWayBinding: '=',
-                    methodToCall: '&method',
-                    customAttr: '=?'
+                    methodToCall: '&method'
                 },
                 templateUrl: 'template/scope/isolatedscope.html',
                 controller: ['$scope', controller]
             }
 
             function controller($scope) {
-                var vm = this;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
                 vm.viewDisplay = function () {
                     vm.methodToCall({ value: 'Returned from directive' });
                 }
@@ -76,7 +75,7 @@
 
     angular.module("smartbreachapp.templates", []).run(["$templateCache", function ($templateCache) {
         $templateCache.put("template/scope/isolatedscope.html",
-          "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button><h4>Custom Attribute changes</h4><span>{{customAttr}}</span>" +
+          "<h4>‘@’ – Text binding / one-way binding</h4><span>{{oneWayBinding}}</span><h4>‘=’ – Direct model binding / two-way binding</h4><span>{{twoWayBinding}}</span><h4>‘&’ – Behavior binding / Method binding</h4><button ng-click='viewDisplay()'>View Product</button>" +
           "");
     }]);
 
