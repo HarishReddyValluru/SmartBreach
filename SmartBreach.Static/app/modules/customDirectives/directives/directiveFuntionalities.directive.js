@@ -176,10 +176,7 @@
                 bindToController:{
                     bindtocontrollerAttr: '='
                 },
-                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>{{vm.bindtocontrollerText}}</span>',
-                link: function (scope, element, attrs) {
-                    
-                }
+                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>{{vm.bindtocontrollerText}}</span>'
             }
 
             function controller($scope) {
