@@ -18,7 +18,7 @@
 
     angular.module('smartbreachapp.dashboard', []);
     angular.module('smartbreachapp.pages', ['checklist-model', 'angularjs-dropdown-multiselect']);
-    angular.module("smartbreachapp.templates", ['template/scope/isolatedscope.html']);
+    angular.module("smartbreachapp.templates", ['template/scope/isolatedscope.html', "template/scope/sideNav.html"]);
 
     // For RequestContext
     angular

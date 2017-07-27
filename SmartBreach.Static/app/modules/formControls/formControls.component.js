@@ -95,7 +95,7 @@
         }
 
         function _put() {
-            vm.vibes = { id: 1, name: 'Matrix 1' };
+            vm.vibes = { recid: 1, name: 'Matrix 1' };
             formControlService.Register.update({ id: 2444 }, vm.vibes).then(function (data) {
                 toastr.success(data)
             });
