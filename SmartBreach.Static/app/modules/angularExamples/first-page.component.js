@@ -6,11 +6,22 @@
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
             controllerAs: 'vm',
-            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', controller]
+            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', '$parse', controller]
         });
 
-    function controller($scope, $rootScope, $window, $timeout, sharedProperties) {
+    function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse) {
         var vm = this;
+
+        angular.element("[data-toggle='tooltip']").tooltip({
+            animated: 'fade',
+            placement: 'right'
+        });
+
+        //$parse
+        $scope.name = 'Valluru';
+        $scope.parse = $parse('name')($scope);
+        $parse('name').assign($scope, 'Harish');
+        $scope.parse_assign = $parse('name')($scope);
 
         //Browser Cache
         $scope.$watch('vm.sessionStorage', function () {

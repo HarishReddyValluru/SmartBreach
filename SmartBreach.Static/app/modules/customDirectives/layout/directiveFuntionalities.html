@@ -26,6 +26,16 @@
         </tr>
         <tr>
             <td>
+                <h3>$compile</h3>
+            </td>
+            <td>
+                <div class="surround">
+                    <directive-services one-way-binding="{{vm.oneWayData}}"></directive-services>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <h3>scope : false(default)</h3>
             </td>
             <td>
@@ -40,8 +50,9 @@
         </tr>
         <tr>
             <td>
-                <h3>scope : true</h3>
-                <span data-toggle="tooltip" title="There is one thing to note here: If the content in the text box in the header section is changed first, then this change is also reflected inside the directive. However, after the movie title in the directive is changed, any changes made to the heading text no longer affect the directive content. The explanation for this is that the ng-model creates a new movie variable only after the text box value is changed. Until then, it refers to the value in the parent scope.">Important Points</span>
+                <h3>
+                    scope : true &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="There is one thing to note here: If the content in the text box in the header section is changed first, then this change is also reflected inside the directive. However, after the movie title in the directive is changed, any changes made to the heading text no longer affect the directive content. The explanation for this is that the ng-model creates a new movie variable only after the text box value is changed. Until then, it refers to the value in the parent scope."></i>
+                </h3>
             </td>
             <td>
                 <div class="surround">
@@ -56,7 +67,7 @@
         <tr>
             <td>
                 <h3>scope : { }(Isolated Scope)</h3>
-                <span>Important Points</span>
+                <span></span>
             </td>
             <td>
                 <div class="surround">
@@ -66,8 +77,9 @@
         </tr>
         <tr>
             <td>
-                <h3>Compile function</h3>
-                <span data-toggle="tooltip" title="The compile function is used for template DOM manipulation and if you need to perform some common calculations for all references of a given directive. It executes in phase when Angular compiles your directive. Compile function doesn’t have scope. So if you have multiple usages of directive on the page the compile function will executes once. In addition the compile function must return link function, since the link attribute is ignored if the compile attribute is defined.">Important Points</span>
+                <h3>
+                    Compile function &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="The compile function is used for template DOM manipulation and if you need to perform some common calculations for all references of a given directive. It executes in phase when Angular compiles your directive. Compile function doesn’t have scope. So if you have multiple usages of directive on the page the compile function will executes once. In addition the compile function must return link function, since the link attribute is ignored if the compile attribute is defined."></i>
+                </h3>
             </td>
             <td>
                 <div class="surround">
@@ -77,8 +89,10 @@
         </tr>
         <tr>
             <td>
-                <h3>Link function</h3>
-                <span data-toggle="tooltip" title="The link function is normally used for registering DOM listeners, $watch expressions on the scope, manipulating of DOM for the current instance of the directive. This function executes in the linking phase, when the data from the $scope is attached to the function and then link function returns the linked html.">Important Points</span>
+                <h3>
+                    Link function &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="The link function is normally used for registering DOM listeners, $watch expressions on the scope, manipulating of DOM for the current instance of the directive. This function executes in the linking phase, when the data from the $scope is attached to the function and then link function returns the linked html."></i>
+                </h3>
+
             </td>
             <td>
                 <div class="surround">
