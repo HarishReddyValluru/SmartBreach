@@ -12,6 +12,11 @@
     function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse) {
         var vm = this;
 
+        vm.$onInit = function () {
+            vm.oneWayBindingData = "One way data passed";
+            vm.twoWayBindingData = "Two way data passed";
+        }
+
         angular.element("[data-toggle='tooltip']").tooltip({
             animated: 'fade',
             placement: 'right'

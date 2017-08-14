@@ -47,12 +47,23 @@
                             Parse : {{parse}} {{parse_assign}}
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <span>$parse &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="1. The $parse compiles an expression to a function,  2. This service is used as a getter/setter for single variables"></i></span>
+                        </td>
+                        <td>
+                            <span>{{vm.oneWayBindingData}}</span><br/>
+                            <span>{{vm.twoWayBindingData}}</span>
+                            <input type="text" ng-model="vm.twoWayBindingData" />
+
+                        </td>
+                    </tr>
                     
                 </table>
             </div>
 
             <div class="col-lg-6">
-                <second-page></second-page>
+                <second-page one-way-binding="{{vm.oneWayBindingData}}" two-way-binding="vm.twoWayBindingData"></second-page>
             </div>
 
         </div>
