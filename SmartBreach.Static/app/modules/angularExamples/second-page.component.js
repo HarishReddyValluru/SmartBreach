@@ -6,7 +6,11 @@
         .component('secondPage', {
             templateUrl: '/static/app/modules/angularExamples/layout/second-page.html',
             controllerAs: 'vm',
-            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', controller]
+            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', controller],
+            bindings: {
+                oneWayBinding: '@',
+                twoWayBinding: '<'
+            }
         });
 
     function controller($scope, $rootScope, $window, $timeout, sharedProperties) {
@@ -16,6 +20,9 @@
         vm.proceed = _proceed;
 
         vm.$onInit = function () {
+            vm.recieveOneWayBinding = vm.oneWayBinding;
+            vm.recieveTwoWayBinding = vm.twoWayBinding;
+
             vm.countries = [
                 { id: 1, name: 'India' },
                 { id: 2, name: 'Japan' },

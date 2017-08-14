@@ -176,10 +176,7 @@
                 bindToController:{
                     bindtocontrollerAttr: '='
                 },
-                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>{{vm.bindtocontrollerText}}</span>',
-                link: function (scope, element, attrs) {
-                    
-                }
+                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>{{vm.bindtocontrollerText}}</span>'
             }
 
             function controller($scope) {
@@ -190,6 +187,33 @@
                     vm.bindtocontrollerText = vm.bindtocontrollerAttr;
                 }
                 
+            }
+
+            return directive;
+        });
+
+    //services - $compile, $parse, $interpolate
+    angular
+        .module('smartbreachapp.pages')
+        .directive('directiveServices', function () {
+            var directive = {
+                restrict: 'E',
+                replace: false,
+                controller: ['$scope', controller],
+                controllerAs: 'vm',
+                scope: {
+                    oneWayBinding: '@',
+                },
+                template: '<h4>{{vm.bindToControllerHeading}}</h4><span>My name is {{oneWayBinding}}</span>'
+            }
+
+            function controller($scope) {
+                var vm = $scope;    //In a template for example, you'll need to bind a function to the scope to access it. You'll not be able to call a function binded on this directly.
+
+                vm.$onInit = function () {
+                    vm.bindToControllerHeading = "$compile";
+                }
+
             }
 
             return directive;
