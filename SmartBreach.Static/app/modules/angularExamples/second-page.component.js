@@ -37,8 +37,6 @@
                 vm.sessionStorageValue = $window.sessionStorage.getItem('cacheValue');
             }
 
-            alert(JSON.stringify($window.sessionStorage.getItem('cacheArray')));
-
             //Set Shared property value from first page to second page
             vm.sharedPropertyValue = sharedProperties.getProperty();
         }
