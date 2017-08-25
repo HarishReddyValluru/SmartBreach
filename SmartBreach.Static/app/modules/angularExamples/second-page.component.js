@@ -8,8 +8,8 @@
             controllerAs: 'vm',
             controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', controller],
             bindings: {
-                oneWayBinding: '@',
-                twoWayBinding: '<'
+                oneWayBinding: '<',
+                twoWayBinding: '='
             }
         });
 
@@ -36,6 +36,8 @@
             if (!angular.isDefined($window.sessionStorage.getItem('cacheValue')) || $window.sessionStorage.getItem('cacheValue') != null) {
                 vm.sessionStorageValue = $window.sessionStorage.getItem('cacheValue');
             }
+
+            alert(JSON.stringify($window.sessionStorage.getItem('cacheArray')));
 
             //Set Shared property value from first page to second page
             vm.sharedPropertyValue = sharedProperties.getProperty();

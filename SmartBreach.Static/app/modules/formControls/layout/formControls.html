@@ -15,6 +15,15 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Year</td>
+                    <td>
+                        <select ng-model="vm.register.selectedYear" class="form-control">
+                            <option ng-selected="selected" value="">{{vm.years[vm.years.length - 1]}}</option>
+                            <option ng-if="$index !== 0" ng-repeat="year in vm.years | orderBy:'-'" value="{{year}}">{{year}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td>Gender : </td>
                     <td>
                         <select ng-model="vm.register.selectedGender" ng-options="gender.type as gender.type for gender in vm.gender" class="form-control">

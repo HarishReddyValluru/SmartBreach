@@ -23,6 +23,8 @@
 
         toastr.success("StateParam Parameter :   " + $stateParams.employeeId);
 
+        vm.years = [2015, 2016, 2017];
+        
         vm.gender = [
             { id: 1, type: 'Male' },
             { id: 2, type: 'Female' }
