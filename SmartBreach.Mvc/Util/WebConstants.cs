@@ -22,6 +22,8 @@ namespace SmartBreach.Mvc.Util
         //-------------------------------------------------------------------------------------------------------
         public static readonly string Api_Root_FromMVC = ConfigurationManager.AppSettings["SmartBreach.Data.Location"];
 
+        public static readonly string WebAPI_UrlPath = "http://localhost-smartbreach.com/api/";
+
         public static readonly string StaticContent_Root_FromMVC = "~/../Static/";
 
         /// <summary>Local root of our custom javascript -- the *S*ingle *P*age *A*pp if you will</summary>

@@ -81,14 +81,34 @@
         </div>
         <div class="col-lg-12 text-center" style="padding-top:10px">
             <input type="submit" ng-disabled="vm.disableStatus" value="Get Form Data" class="btn btn-primary" ng-click="vm.getFormData();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Query" class="btn btn-primary" ng-click="vm.query();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Get" class="btn btn-primary" ng-click="vm.get();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Put" class="btn btn-primary" ng-click="vm.put();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Post" class="btn btn-primary" ng-click="vm.post();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Delete" class="btn btn-primary" ng-click="vm.delete();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Custom method without Id" class="btn btn-primary" ng-click="vm.singleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Custom method Id" class="btn btn-primary" ng-click="vm.multipleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+        </div>
+        <div class="col-lg-12 text-center" style="padding-top:10px">
+            <div class="col-lg-3">
+                <span>Using API Resource</span>
+            </div>
+            <div class="col-lg-9">
+                <input type="submit" value="Query" class="btn btn-primary" ng-click="vm.query();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Get" class="btn btn-primary" ng-click="vm.get();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Post" class="btn btn-primary" ng-click="vm.post();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Put" class="btn btn-primary" ng-click="vm.put();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Delete" class="btn btn-primary" ng-click="vm.delete();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Custom method without Id" class="btn btn-primary" ng-click="vm.singleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Custom method Id" class="btn btn-primary" ng-click="vm.multipleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <div class="col-lg-12 text-center" style="padding-top:10px">
+            <div class="col-lg-3">
+                <span>Using $http</span>
+            </div>
+            <div class="col-lg-9">
+                <input type="submit" value="Query" class="btn btn-primary" ng-click="vm.httpQuery();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Get" class="btn btn-primary" ng-click="vm.httpGet();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Post" class="btn btn-primary" ng-click="vm.httpPost();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Put" class="btn btn-primary" ng-click="vm.httpPut();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Delete" class="btn btn-primary" ng-click="vm.httpDelete();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Custom method without Id" class="btn btn-primary" ng-click="vm.singleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Custom method Id" class="btn btn-primary" ng-click="vm.multipleCustomList();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
     </form>
 

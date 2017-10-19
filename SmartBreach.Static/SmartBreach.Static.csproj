@@ -86,6 +86,7 @@
     <Content Include="app\modules\formBuilder\layout\formBuilder.html" />
     <Content Include="app\modules\formControls\formControls.component.js" />
     <Content Include="app\modules\formControls\formControls.service.js" />
+    <Content Include="app\modules\formControls\formControlsHttp.service.js" />
     <Content Include="app\modules\formControls\layout\formControls.html" />
     <Content Include="app\modules\modalConfirm\layout\modal-confirm.html" />
     <Content Include="app\modules\modalConfirm\modal-confirm.controller.js" />

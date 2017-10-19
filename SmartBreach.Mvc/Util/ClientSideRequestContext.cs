@@ -8,6 +8,7 @@ namespace SmartBreach.Mvc.Util
         public ClientSideRequestContext()
         {
             PathAPI = WebConstants.Api_Root_FromMVC;
+            WebAPI_UrlPath = WebConstants.WebAPI_UrlPath;
             PathLIB = VirtualPathUtility.ToAbsolute(WebConstants.StaticContent_Root_FromMVC + WebConstants.StaticContent_LibStyleLocal_Root);
             PathSPA = VirtualPathUtility.ToAbsolute(WebConstants.StaticContent_Root_FromMVC + WebConstants.StaticContent_SPALocal_Root);
             PathImage = VirtualPathUtility.ToAbsolute(WebConstants.StaticContent_Root_FromMVC + WebConstants.StaticContent_Style_Root + WebConstants.StaticContent_ImageLocal_Root);
@@ -28,6 +29,8 @@ namespace SmartBreach.Mvc.Util
 
         /// <summary>path to the data source -- webapi</summary>
         public string PathAPI { get; private set; }
+
+        public string WebAPI_UrlPath { get; private set; }
 
         /// <summary>path to the javascript librarires folder</summary>
         public string PathLIB { get; private set; }

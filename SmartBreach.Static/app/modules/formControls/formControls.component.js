@@ -6,10 +6,10 @@
         .component('formControls', {
             templateUrl: '/static/app/modules/formControls/layout/formControls.html',
             controllerAs: 'vm',
-            controller: ['$q', '$scope', '$rootScope', '$window', '$stateParams', '$cacheFactory', '$timeout', '$filter', '$uibModal', 'formControlService', 'modalConfirmService', controller]
+            controller: ['$q', '$scope', '$rootScope', '$window', '$stateParams', '$cacheFactory', '$timeout', '$filter', '$uibModal', 'formControlService', 'formControlsHttpService', 'modalConfirmService', controller]
         });
 
-    function controller($q, $scope, $rootScope, $window, $stateParams, $cacheFactory, $timeout, $filter, $uibModal, formControlService, modalConfirmService) {
+    function controller($q, $scope, $rootScope, $window, $stateParams, $cacheFactory, $timeout, $filter, $uibModal, formControlService, formControlsHttpService, modalConfirmService) {
 
         var vm = this;
         vm.query = _query;
@@ -17,6 +17,13 @@
         vm.put = _put;
         vm.post = _post
         vm.delete = _delete;
+
+        vm.httpQuery = _httpQuery;
+        vm.httpGet = _httpGet;
+        vm.httpPut = _httpPut;
+        vm.httpPost = _httpPost;
+        vm.httpDelete = _httpDelete;
+
         vm.getFormData = _getFormData;
         vm.singleCustomList = _singleCustomList;
         vm.multipleCustomList = _multipleCustomList;
@@ -94,47 +101,83 @@
             alert(JSON.stringify(vm.register));
         }
 
+        //---------------------------------------USING API RESOURCE----------------------------------------------------------------------
+
         function _query() {
             formControlService.Register.query({}).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _get() {
             formControlService.Register.get({ id: 2444 }).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _put() {
             vm.vibes = { recid: 1, name: 'Matrix 1' };
             formControlService.Register.update({ id: 2444 }, vm.vibes).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _post() {
             vm.saveVibes = { id: 33, name: 'Matrix 2' };
             formControlService.Register.save({}, vm.saveVibes).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _delete() {
             formControlService.Register.delete({ id: 32 }).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _singleCustomList() {
             formControlService.Register.singleCustomList({}).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
             });
         }
 
         function _multipleCustomList() {
             formControlService.Register.multipleCustomList({ id: 2444 }).then(function (data) {
-                toastr.success(data)
+                toastr.success('Using apiResource  : ' + data)
+            });
+        }
+
+        //------------------------------------USING $HTTP-------------------------------------------------------------
+
+        function _httpQuery() {
+            formControlsHttpService.httpQuery().then(function (response) {
+                toastr.success('Using $http  : ' + response.data);
+            });
+        }
+
+        function _httpGet() {
+            formControlsHttpService.httpGet(14).then(function (response) {
+                toastr.success('Using $http  : ' + response.data);
+            });
+        }
+
+        function _httpPut() {
+            vm.saveVibes = { id: 33, name: 'Matrix 2' };
+            formControlsHttpService.httpPut(35, vm.saveVibes).then(function (response) {
+                toastr.success('Using $http  : ' + response.data);
+            });
+        }
+
+        function _httpPost() {
+            vm.saveVibes = { id: 33, name: 'Matrix 2' };
+            formControlsHttpService.httpPost(vm.saveVibes).then(function (response) {
+                toastr.success('Using $http  : ' + response.data);
+            });
+        }
+
+        function _httpDelete() {
+            formControlsHttpService.httpDelete(56).then(function (response) {
+                toastr.success('Using $http  : ' + response.data);
             });
         }
 
