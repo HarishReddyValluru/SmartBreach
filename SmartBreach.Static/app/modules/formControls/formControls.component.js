@@ -23,6 +23,18 @@
 
         toastr.success("StateParam Parameter :   " + $stateParams.employeeId);
 
+        $scope.$onInit = function () {
+            vm.disableStatus = !vm.registrationForm.$invalid;
+        }
+
+        //$scope.$watch(angular.bind(this, function () {
+        //    return this.name;
+        //}), function (newVal) {
+        //    console.log('Name changed to ' + newVal);
+        //});
+
+        vm.years = [2015, 2016, 2017];
+        
         vm.gender = [
             { id: 1, type: 'Male' },
             { id: 2, type: 'Female' }

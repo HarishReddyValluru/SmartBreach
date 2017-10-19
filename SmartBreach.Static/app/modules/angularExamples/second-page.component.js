@@ -8,8 +8,8 @@
             controllerAs: 'vm',
             controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', controller],
             bindings: {
-                oneWayBinding: '@',
-                twoWayBinding: '<'
+                oneWayBinding: '<',
+                twoWayBinding: '='
             }
         });
 
