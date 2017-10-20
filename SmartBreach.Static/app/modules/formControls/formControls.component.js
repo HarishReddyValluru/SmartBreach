@@ -124,45 +124,45 @@
 
         function _query() {
             formControlService.Register.query({}).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _get() {
             formControlService.Register.get({ id: 2444 }).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _put() {
             vm.vibes = { recid: 1, name: 'Matrix 1' };
             formControlService.Register.update({ id: 2444 }, vm.vibes).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _post() {
             vm.saveVibes = { id: 33, name: 'Matrix 2' };
             formControlService.Register.save({}, vm.saveVibes).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _delete() {
             formControlService.Register.delete({ id: 32 }).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _singleCustomList() {
             formControlService.Register.singleCustomList({}).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data);
             });
         }
 
         function _multipleCustomList() {
             formControlService.Register.multipleCustomList({ id: 2444 }).then(function (data) {
-                toastr.success('Using apiResource  : ' + data)
+                toastr.success('Using apiResource  : ' + data.id + " , " + data.name);
             });
         }
 
