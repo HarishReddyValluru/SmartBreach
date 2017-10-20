@@ -75,6 +75,20 @@
             { id: 8, name: 'Russia State 2', countryId: 4 }
         ];
 
+        vm.cities = {
+            city1: 'Hyderabad',
+            city2: 'Kurnool',
+            city3: 'Visakapatnam',
+            city4: 'vijayawada'
+        }
+
+        vm.towns = {
+            town1: {id: 1, name: 'Town Name 1'},
+            town2: { id: 2, name: 'Town Name 2' },
+            town3: { id: 3, name: 'Town Name 3' },
+            town4: { id: 4, name: 'Town Name 4' }
+        }
+
         vm.directions = [
             { id: 1, name: 'East' },
             { id: 2, name: 'West' },
@@ -95,6 +109,11 @@
                     return s.countryId == vm.register.selectedCountry;
                 });
             });
+        });
+
+        angular.element("[data-toggle='tooltip']").tooltip({
+            animated: 'fade',
+            placement: 'right'
         });
 
         function _getFormData() {

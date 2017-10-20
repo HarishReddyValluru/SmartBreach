@@ -15,16 +15,23 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Year</td>
+                    <td>Arc Year <i class="fa fa-info-circle" data-toggle="tooltip" title="Using ng-options - Dropdown with - Array of values - Last value should be selected by default - orderBy should be reverse"></i> :</td>
                     <td>
-                        <select ng-model="vm.register.selectedYear" class="form-control">
+                        <select class="form-control" ng-model="vm.register.selectedArcYear" ng-init="vm.register.selectedArcYear = vm.years[vm.years.length-1]" ng-options="y for (x, y) in vm.years | orderBy:'-'">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stc Year <i class="fa fa-info-circle" data-toggle="tooltip" title="Using ng-repeat - Dropdown with - Array of values - Last value should be selected by default - orderBy should be reverse"></i> :</td>
+                    <td>
+                        <select ng-model="vm.register.selectedStcYear" class="form-control">
                             <option ng-selected="selected" value="">{{vm.years[vm.years.length - 1]}}</option>
                             <option ng-if="$index !== 0" ng-repeat="year in vm.years | orderBy:'-'" value="{{year}}">{{year}}</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>Gender : </td>
+                    <td>Gender <i class="fa fa-info-circle" data-toggle="tooltip" title="Using ng-options with Array of objects"></i> : </td>
                     <td>
                         <select ng-model="vm.register.selectedGender" ng-options="gender.type as gender.type for gender in vm.gender" class="form-control">
                             <option value="">Select</option>
@@ -32,7 +39,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Country : </td>
+                    <td>Country <i class="fa fa-info-circle" data-toggle="tooltip" title="Cascading Dropdown - Using ng-repeat with Array of objects"></i> : </td>
                     <td>
                         <select ng-model="vm.register.selectedCountry" class="form-control">
                             <option value="">Select</option>
@@ -41,11 +48,27 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>State : </td>
+                    <td>State <i class="fa fa-info-circle" data-toggle="tooltip" title="Cascading Dropdown - Using ng-repeat with Array of objects"></i>  : </td>
                     <td>
                         <select ng-model="vm.register.selectedState" class="form-control">
                             <option value="">Select</option>
                             <option ng-repeat="state in vm.states" value="{{state.id}}">{{state.name}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="The Data Source as an Object - key and value pair"></i> : </td>
+                    <td>
+                        <select ng-model="vm.register.selectedCity" ng-options="y for (x,y) in vm.cities" class="form-control">
+                            <option value="">Select</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Town &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="The Data Source as an Object - key and value pair and value as an object"></i> : </td>
+                    <td>
+                        <select ng-model="vm.register.selectedTown" ng-options="y.name for (x,y) in vm.towns" class="form-control">
+                            <option value="">Select</option>
                         </select>
                     </td>
                 </tr>
