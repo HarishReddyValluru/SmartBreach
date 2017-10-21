@@ -6,10 +6,10 @@
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
             controllerAs: 'vm',
-            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', '$parse', controller]
+            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
         });
 
-    function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse) {
+    function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
         var vm = this;
 
         vm.$onInit = function () {
@@ -22,11 +22,20 @@
             placement: 'right'
         });
 
+        //$interpolate
+        vm.htmlStringValue = "Hyderabad";
+        var htmlString = "Working from : {{vm.htmlStringValue}}";
+        vm.htmlStringAssigned = $interpolate(htmlString)($scope);
+
+        vm.buttonText = "Click Me";
+        var htmlButton = "<button ng-click='clickme();'>{{vm.buttonText}}</button>";
+        vm.htmlButtonAssigned = $interpolate(htmlButton)($scope);
+
         //$parse
-        $scope.name = 'Valluru';
-        $scope.parse = $parse('name')($scope);
-        $parse('name').assign($scope, 'Harish');
-        $scope.parse_assign = $parse('name')($scope);
+        vm.name = 'Valluru';
+        vm.parse = $parse('vm.name')($scope);
+        $parse('vm.name').assign($scope, 'Harish');
+        vm.parse_assign = $parse('vm.name')($scope);
 
         //Browser Cache
         $scope.$watch('vm.sessionStorage', function () {

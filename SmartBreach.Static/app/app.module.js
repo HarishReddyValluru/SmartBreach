@@ -11,7 +11,8 @@
              'smartbreachapp.pages',
              'ngResource',
              'ngAnimate',
-             'smartbreachapp.templates'
+             'smartbreachapp.templates',
+             'ngSanitize'
     ]);
 
     //'ui.bootstrap' - injected when issue with modal popup

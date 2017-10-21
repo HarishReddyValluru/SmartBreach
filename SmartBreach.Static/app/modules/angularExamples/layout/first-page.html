@@ -1,11 +1,9 @@
 ﻿<div>
     <form name="formFirstPage">
         <div class="col-lg-12">
-
             <div class="col-lg-6">
                 <div style="width: 100%; height: 50px; background-color: white">
                 </div>
-
                 <table>
                     <tr>
                         <td>
@@ -41,33 +39,45 @@
                     </tr>
                     <tr>
                         <td>
-                            <span>$parse &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="1. The $parse compiles an expression to a function,  2. This service is used as a getter/setter for single variables"></i></span>
+                            <span>Controller Bindings &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title=""></i></span>
                         </td>
                         <td>
-                            Parse : {{parse}} {{parse_assign}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>$parse &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="1. The $parse compiles an expression to a function,  2. This service is used as a getter/setter for single variables"></i></span>
-                        </td>
-                        <td>
-                            <span>{{vm.oneWayBindingData}}</span><br/>
+                            <span>{{vm.oneWayBindingData}}</span><br />
                             <span>{{vm.twoWayBindingData}}</span>
                             <input type="text" ng-model="vm.twoWayBindingData" />
-
                         </td>
                     </tr>
-                    
+
                 </table>
             </div>
 
             <div class="col-lg-6">
                 <second-page one-way-binding="vm.oneWayBindingData" two-way-binding="vm.twoWayBindingData"></second-page>
             </div>
+        </div>
 
+        <div class="col-lg-12">
+            <div style="width: 100%; height: 50px; background-color: white">
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <span>$interpolate &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="This service is used to evaluate angular expressions. You can run an entire string against a scope, and interpolate will give the result."></i></span>
+                    </td>
+                    <td>
+                        <span ng-bind-html="vm.htmlStringAssigned"></span> &nbsp;&nbsp;
+                        <div ng-bind-html="vm.htmlButtonAssigned"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>$parse &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="This service is used as a getter/setter for single variables only."></i></span>
+                    </td>
+                    <td>
+                        Parse : {{vm.parse}} {{vm.parse_assign}}
+                    </td>
+                </tr>
+            </table>
         </div>
     </form>
-
-
 </div>
