@@ -5,16 +5,15 @@
         .module('smartbreachapp.pages')
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
-            controllerAs: 'vm',
             controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
         });
 
     function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
-        var vm = this;
+        var $ctrl = this;
 
-        vm.$onInit = function () {
-            vm.oneWayBindingData = "One way data passed";
-            vm.twoWayBindingData = "Two way data passed";
+        $ctrl.$onInit = function () {
+            $ctrl.oneWayBindingData = "One way data passed";
+            $ctrl.twoWayBindingData = "Two way data passed";
         }
 
         angular.element("[data-toggle='tooltip']").tooltip({
@@ -23,37 +22,37 @@
         });
 
         //$interpolate
-        vm.htmlStringValue = "Hyderabad";
-        var htmlString = "Working from : {{vm.htmlStringValue}}";
-        vm.htmlStringAssigned = $interpolate(htmlString)($scope);
+        $ctrl.htmlStringValue = "Hyderabad";
+        var htmlString = "Working from : {{$ctrl.htmlStringValue}}";
+        $ctrl.htmlStringAssigned = $interpolate(htmlString)($scope);
 
-        vm.buttonText = "Click Me";
-        var htmlButton = "<button ng-click='clickme();'>{{vm.buttonText}}</button>";
-        vm.htmlButtonAssigned = $interpolate(htmlButton)($scope);
+        $ctrl.buttonText = "Click Me";
+        var htmlButton = "<button ng-click='clickme();'>{{$ctrl.buttonText}}</button>";
+        $ctrl.htmlButtonAssigned = $interpolate(htmlButton)($scope);
 
         //$parse
-        vm.name = 'Valluru';
-        vm.parse = $parse('vm.name')($scope);
-        $parse('vm.name').assign($scope, 'Harish');
-        vm.parse_assign = $parse('vm.name')($scope);
+        $ctrl.name = 'Valluru';
+        $ctrl.parse = $parse('$ctrl.name')($scope);
+        $parse('$ctrl.name').assign($scope, 'Harish');
+        $ctrl.parse_assign = $parse('$ctrl.name')($scope);
 
         //Browser Cache
-        $scope.$watch('vm.sessionStorage', function () {
-            $window.sessionStorage.setItem('cacheValue', vm.sessionStorage);
+        $scope.$watch('$ctrl.sessionStorage', function () {
+            $window.sessionStorage.setItem('cacheValue', $ctrl.sessionStorage);
         });
 
         //Sharing properties between controllers
-        $scope.$watch('vm.sharedProperty', function () {
-            sharedProperties.setProperty(vm.sharedProperty);
+        $scope.$watch('$ctrl.sharedProperty', function () {
+            sharedProperties.setProperty($ctrl.sharedProperty);
         });
 
         //Broadcast properties $rootScope ----> $scope
-        $scope.$watch('vm.broadcastProperty', function () {
-            $rootScope.$broadcast('broadcastPropertyEvent', { 'broadcastValue': vm.broadcastProperty })
+        $scope.$watch('$ctrl.broadcastProperty', function () {
+            $rootScope.$broadcast('broadcastPropertyEvent', { 'broadcastValue': $ctrl.broadcastProperty })
         });
 
         $scope.$on('emitPropertyEvent', function (event, args) {
-            vm.emitPropertyValue = args.emitValue;
+            $ctrl.emitPropertyValue = args.emitValue;
         });
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {

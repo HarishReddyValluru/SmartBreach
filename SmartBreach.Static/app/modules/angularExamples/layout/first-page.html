@@ -10,7 +10,7 @@
                             <span>$window.sessionStorage</span>
                         </td>
                         <td>
-                            <input type="text" ng-model="vm.sessionStorage" class="form-control" />
+                            <input type="text" ng-model="$ctrl.sessionStorage" class="form-control" />
                         </td>
                     </tr>
                     <tr>
@@ -18,7 +18,7 @@
                             <span>Share properties between controllers</span>
                         </td>
                         <td>
-                            <input type="text" ng-model="vm.sharedProperty" class="form-control" />
+                            <input type="text" ng-model="$ctrl.sharedProperty" class="form-control" />
                         </td>
                     </tr>
                     <tr>
@@ -26,7 +26,7 @@
                             <span>$broadcast</span>
                         </td>
                         <td>
-                            <input type="text" ng-model="vm.broadcastProperty" class="form-control" />
+                            <input type="text" ng-model="$ctrl.broadcastProperty" class="form-control" />
                         </td>
                     </tr>
                     <tr>
@@ -34,7 +34,7 @@
                             <span>$emit</span>
                         </td>
                         <td>
-                            <input type="text" ng-model="vm.emitPropertyValue" class="form-control" />
+                            <input type="text" ng-model="$ctrl.emitPropertyValue" class="form-control" />
                         </td>
                     </tr>
                     <tr>
@@ -42,9 +42,9 @@
                             <span>Controller Bindings &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title=""></i></span>
                         </td>
                         <td>
-                            <span>{{vm.oneWayBindingData}}</span><br />
-                            <span>{{vm.twoWayBindingData}}</span>
-                            <input type="text" ng-model="vm.twoWayBindingData" />
+                            <span>{{$ctrl.oneWayBindingData}}</span><br />
+                            <span>{{$ctrl.twoWayBindingData}}</span>
+                            <input type="text" ng-model="$ctrl.twoWayBindingData" />
                         </td>
                     </tr>
 
@@ -52,7 +52,7 @@
             </div>
 
             <div class="col-lg-6">
-                <second-page one-way-binding="vm.oneWayBindingData" two-way-binding="vm.twoWayBindingData"></second-page>
+                <second-page one-way-binding="$ctrl.oneWayBindingData" two-way-binding="$ctrl.twoWayBindingData"></second-page>
             </div>
         </div>
 
@@ -65,8 +65,8 @@
                         <span>$interpolate &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="This service is used to evaluate angular expressions. You can run an entire string against a scope, and interpolate will give the result."></i></span>
                     </td>
                     <td>
-                        <span ng-bind-html="vm.htmlStringAssigned"></span> &nbsp;&nbsp;
-                        <div ng-bind-html="vm.htmlButtonAssigned"></div>
+                        <span ng-bind-html="$ctrl.htmlStringAssigned"></span> &nbsp;&nbsp;
+                        <div ng-bind-html="$ctrl.htmlButtonAssigned"></div>
                     </td>
                 </tr>
                 <tr>
@@ -74,7 +74,7 @@
                         <span>$parse &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="This service is used as a getter/setter for single variables only."></i></span>
                     </td>
                     <td>
-                        Parse : {{vm.parse}} {{vm.parse_assign}}
+                        Parse : {{$ctrl.parse}} {{$ctrl.parse_assign}}
                     </td>
                 </tr>
             </table>
