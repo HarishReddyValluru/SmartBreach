@@ -16,13 +16,10 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-          'test/pre-app-mocks/**/*.js',
-
-          'build/js/**/vendor*.js',
-          'Scripts/KendoUI/2014.2.1008/kendo.web.min.js',
-          'build/js/**/app*.js',
-
-          'test/**/*.js'
+            "bower_components/angular/angular.js",
+            "bower_components/angular-mocks/angular-mocks.js",
+            "app/modules/formControls/**/*.js",
+            "test/**/*.js"
         ],
 
 
@@ -54,7 +51,7 @@ module.exports = function (config) {
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_ERROR,
+        logLevel: config.LOG_INFO,
 
 
         // enable / disable watching file and executing tests whenever any file changes
@@ -63,7 +60,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome', 'PhantomJS'],
+        browsers: ['PhantomJS'], //'Chrome', 
 
 
         // Continuous Integration mode
