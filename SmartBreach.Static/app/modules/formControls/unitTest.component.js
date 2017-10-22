@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('smartbreachapp.pages',[])
+        .module('smartbreachapp.pages')
         .component('unitTesting', {
             templateUrl: '/static/app/modules/formControls/layout/unitTest.html',
             controllerAs: 'vm',

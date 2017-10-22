@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('smartbreachapp.pages',[]).component('formControls', {
+    angular.module('smartbreachapp.pages').component('formControls', {
             templateUrl: '/static/app/modules/formControls/layout/formControls.html',
             controllerAs: 'vm',
             controller: ['$q', '$scope', '$rootScope', '$window', '$cacheFactory', '$timeout', '$filter', '$uibModal', 'formControlService', 'formControlsHttpService', 'modalConfirmService', controller]

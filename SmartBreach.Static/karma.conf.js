@@ -8,24 +8,43 @@ module.exports = function (config) {
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
 
-
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jasmine'],
 
-
         // list of files / patterns to load in the browser
         files: [
-            "bower_components/angular/angular.js",
-            "bower_components/angular-mocks/angular-mocks.js",
-            "app/modules/formControls/**/*.js",
-            "test/**/*.js"
+            "bower_components/jquery/dist/jquery.js",
+                "bower_components/angular/angular.js",
+                "bower_components/ng-idle/angular-idle.js",
+                "bower_components/angular-local-storage/dist/angular-local-storage.js",
+                "bower_components/angular-resource/angular-resource.js",
+                "bower_components/angular-sanitize/angular-sanitize.js",
+                "bower_components/angular-ui-router/release/angular-ui-router.js",
+                "bower_components/angular-bootstrap/ui-bootstrap.js",
+                "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+                "bower_components/angular-cookies/angular-cookies.js",
+                "bower_components/angular-animate/angular-animate.js",
+                "bower_components/angular-loading-bar/build/loading-bar.js",
+                "bower_components/angular-auto-validate/dist/jcs-auto-validate.js",
+                "bower_components/underscore/underscore.js",
+                "bower_components/jquery.filedownload/src/Scripts/jquery.fileDownload.js",
+                "bower_components/fineuploader-dist/dist/fine-uploader.js",
+                "bower_components/toastr/toastr.js",
+				"bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.js",
+				"bower_components/bootstrap/dist/js/bootstrap.js",
+				"bower_components/checklist-model/checklist-model.js",
+				"bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js",
+                "bower_components/angular-mocks/angular-mocks.js",
+                "test/pre-app-mocks/MockBootstrapRequestContext.js", //BoostrapRequestContext() method should be load first to get method for next step
+                "app/app.module.js",
+                "app/modules/formControls/**/*.js",
+                "test/**/*.js"
         ],
-
 
         // list of files to exclude
         exclude: [
-            'build/js/**/*.min.js'
+            
         ],
 
 
@@ -60,7 +79,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'], //'Chrome', 
+        browsers: ['Chrome'], //'Chrome', 
 
 
         // Continuous Integration mode
