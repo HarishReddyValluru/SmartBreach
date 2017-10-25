@@ -10,7 +10,7 @@
         var service = {
             Register: apiResource('Smart/Register/:id', { id: '@RecordID', dataSource: "@DataSource" }, {
                 singleCustomList: { method: 'GET', url: 'Smart/Register/:id/singleCustomList', isArray: true },
-                multipleCustomList: { method: 'GET', url: 'Smart/Register/multipleCustomList/:dataSource' }
+                multipleCustomList: { method: 'GET', url: 'Smart/Register/multipleCustomList/:dataSource', isArray: true } // isArray: true -- For list of objects
             })
         }
         return service;
