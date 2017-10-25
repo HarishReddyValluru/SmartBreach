@@ -161,7 +161,7 @@
         }
 
         function _multipleCustomList() {
-            formControlService.Register.multipleCustomList({ id: 2444 }).then(function (data) {
+            formControlService.Register.multipleCustomList({ dataSource: 5454 }).then(function (data) {
                 toastr.success('Using apiResource  : ' + data.id + " , " + data.name);
             });
         }

@@ -8,9 +8,9 @@
 
     function formControlService(apiResource) {
         var service = {
-            Register: apiResource('Smart/Register/:id', { id: '@RecordID' }, {
+            Register: apiResource('Smart/Register/:id', { id: '@RecordID', dataSource: "@DataSource" }, {
                 singleCustomList: { method: 'GET', url: 'Smart/Register/:id/singleCustomList', isArray: true },
-                multipleCustomList: { method: 'GET', url: 'Smart/Register/:id/multipleCustomList' }
+                multipleCustomList: { method: 'GET', url: 'Smart/Register/multipleCustomList/:dataSource' }
             })
         }
         return service;
