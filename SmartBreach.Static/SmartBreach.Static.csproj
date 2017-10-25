@@ -88,6 +88,8 @@
     <Content Include="app\modules\formControls\formControls.service.js" />
     <Content Include="app\modules\formControls\formControlsHttp.service.js" />
     <Content Include="app\modules\formControls\layout\formControls.html" />
+    <Content Include="app\modules\formControls\layout\unitTest.html" />
+    <Content Include="app\modules\formControls\unitTest.component.js" />
     <Content Include="app\modules\modalConfirm\layout\modal-confirm.html" />
     <Content Include="app\modules\modalConfirm\modal-confirm.controller.js" />
     <Content Include="app\modules\modalConfirm\modalConfirm.service.js" />
@@ -121,6 +123,7 @@
   <ItemGroup>
     <Content Include="app\app.module.js" />
     <Content Include="app\app.route.js" />
+    <Content Include="test\controllerTest.spec.js" />
     <Content Include="test\pre-app-mocks\MockBootstrapRequestContext.js" />
     <Content Include="test\stub.spec.js" />
     <Content Include="Web.config" />
