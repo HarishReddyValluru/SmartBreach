@@ -40,6 +40,11 @@
                 url: "/DirectiveFunctionalities",
                 template: "<directive-functionalities></directive-functionalities>"
             })
+            .state('dashboard.directiveformcontrols',
+            {
+                url: "/DirectiveFormControls",
+                template: "<directive-formcontrols></directive-formcontrols>"
+            })
 
     }
 })();

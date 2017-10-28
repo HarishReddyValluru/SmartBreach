@@ -31,7 +31,7 @@
                 id: 'customDirectives', name: 'Custom Directives', cssClass: '', hasChildMenus: true, toOpenInNewWindow: false,
                 childMenus: [
                     { name: 'Directive Functionalities', state: 'dashboard.directivefunctionalities', cssClass: '', toOpenInNewWindow: false },
-                    { name: 'Card View', state: 'dashboard.cardview', cssClass: '', toOpenInNewWindow: false }
+                    { name: 'Directive Form Controls', state: 'dashboard.directiveformcontrols', cssClass: '', toOpenInNewWindow: false }
                 ]
             },
         ];
