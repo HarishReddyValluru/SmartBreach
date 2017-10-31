@@ -7,12 +7,13 @@
              'ui.router',
              'ngHamburger',
              'ui.bootstrap',
-             'smartbreachapp.dashboard',
-             'smartbreachapp.pages',
              'ngResource',
              'ngAnimate',
+             'ngSanitize',
+             'smartbreachapp.dashboard',
+             'smartbreachapp.pages',
              'smartbreachapp.templates',
-             'ngSanitize'
+             'smartbreachapp.controls'
     ]);
 
     //'ui.bootstrap' - injected when issue with modal popup
@@ -20,6 +21,7 @@
     angular.module('smartbreachapp.dashboard', []);
     angular.module('smartbreachapp.pages', ['checklist-model', 'angularjs-dropdown-multiselect']);
     angular.module("smartbreachapp.templates", ['template/scope/isolatedscope.html', "template/scope/sideNav.html"]);
+    angular.module('smartbreachapp.controls', []);
 
     // For RequestContext
     angular

@@ -1,0 +1,9 @@
+﻿<div class="input-group input-selector">
+    <span class="input-group-btn" ng-if="!$ctrl.required">
+        <button type="button" class="btn btn-default fa fa-times" ng-click="$ctrl.clear()" ng-disabled="$ctrl.disabled || !$ctrl.displayName"></button>
+    </span>
+    <input type="text" class="form-control" ng-readonly="true" value="{{$ctrl.displayName}}">
+    <span class="input-group-btn">
+        <button type="button" class="btn btn-default fa fa-search" ng-click="$ctrl.openSelector()" ng-disabled="$ctrl.disabled" aria-hidden="true"></button>
+    </span>
+</div>
