@@ -8,7 +8,8 @@
         })
 
     function controller($scope) {
-        $scope.name = "Harish";
+        var $ctrl = this;
+        $ctrl.name = 23;
 
     }
 

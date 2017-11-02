@@ -5,7 +5,13 @@
                 <tr>
                     <td>First Name : </td>
                     <td>
-                        <input type="text" smart-input ng-model="name" />
+                        <input type="text" ng-model="$ctrl.name" smart-input-nt class="form-control" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>First Name : </td>
+                    <td>
+                        <smart-input-t send-model="$ctrl.name" ng-model="$ctrl.name"></smart-input-t>
                     </td>
                 </tr>
             </table>
