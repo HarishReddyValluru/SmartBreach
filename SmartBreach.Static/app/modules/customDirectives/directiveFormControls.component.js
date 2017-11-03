@@ -10,6 +10,7 @@
     function controller($scope) {
         var $ctrl = this;
         $ctrl.name = 23;
+        $ctrl.lastName = "With template from html controller";
 
     }
 
