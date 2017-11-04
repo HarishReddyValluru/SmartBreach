@@ -22,7 +22,6 @@ module.exports = function (config) {
                 "bower_components/angular-sanitize/angular-sanitize.js",
                 "bower_components/angular-ui-router/release/angular-ui-router.js",
                 "bower_components/angular-bootstrap/ui-bootstrap.js",
-                "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
                 "bower_components/angular-cookies/angular-cookies.js",
                 "bower_components/angular-animate/angular-animate.js",
                 "bower_components/angular-loading-bar/build/loading-bar.js",
@@ -37,8 +36,9 @@ module.exports = function (config) {
 				"bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js",
                 "bower_components/angular-mocks/angular-mocks.js",
                 "test/pre-app-mocks/MockBootstrapRequestContext.js", //BoostrapRequestContext() method should be load first to get method for next step
-                "app/app.module.js",
-                "app/modules/formControls/**/*.js",
+                "build/js/app/*.js",
+                //"app/app.module.js",
+                //"app/modules/formControls/**/*.js",
                 "test/**/*.js"
         ],
 

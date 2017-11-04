@@ -2,19 +2,14 @@
 describe('HeroDetailController', function () {
     var $componentController;
 
-    beforeEach(module('smartbreachapp.pages'));
+    beforeEach(module('smartbreachapp'));
     beforeEach(inject(function (_$componentController_) {
         $componentController = _$componentController_;
     }));
 
     it('Case 1 - True', function () {
-        var ctrl = $componentController('unitTesting', null, {});
-        expect(ctrl.mode).toBe('fun'); //pass
-    });
-
-    it('Case 1 - False', function () {
-        var ctrl = $componentController('unitTesting', null, {});
-        expect(ctrl.mode1).toBe('funa'); //pass
+        var ctrl = $componentController('formControls', null, {});
+        expect(ctrl.mode).toBe('funa'); //pass
     });
 
 });
