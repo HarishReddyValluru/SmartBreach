@@ -104,6 +104,16 @@
     <Content Include="app\modules\smartItems\layout\smartItems.html" />
     <Content Include="app\modules\smartItems\smartItems.component.js" />
     <Content Include="app\app-loader.html" />
+    <Content Include="build\css\app-95d8468448.css" />
+    <Content Include="build\css\app-95d8468448.min.css" />
+    <Content Include="build\css\vendor-44e771ca6c.css" />
+    <Content Include="build\css\vendor-44e771ca6c.min.css" />
+    <Content Include="build\fonts\fontawesome-webfont.svg" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="build\js\app-c3d3ea2c3a.js" />
+    <Content Include="build\js\app-c3d3ea2c3a.min.js" />
+    <Content Include="build\js\vendor-c570578c88.js" />
+    <Content Include="build\js\vendor-c570578c88.min.js" />
     <Content Include="content\css\bootstrap.css" />
     <Content Include="gulpfile.js" />
     <Content Include="karma.conf.js" />
@@ -118,6 +128,21 @@
     <Content Include="content\scss\_appLoader.scss" />
     <Content Include="content\scss\_formBuilder.scss" />
     <Content Include="content\scss\_bootstrapOverrides.scss" />
+    <Content Include="build\asset_manifest.json" />
+    <Content Include="build\css\maps\app-95d8468448.css.map" />
+    <Content Include="build\css\maps\vendor-44e771ca6c.css.map" />
+    <Content Include="build\fonts\fontawesome-webfont.eot" />
+    <Content Include="build\fonts\fontawesome-webfont.ttf" />
+    <Content Include="build\fonts\fontawesome-webfont.woff" />
+    <Content Include="build\fonts\fontawesome-webfont.woff2" />
+    <Content Include="build\fonts\FontAwesome.otf" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="build\js\maps\app-c3d3ea2c3a.js.map" />
+    <Content Include="build\js\maps\app-c3d3ea2c3a.min.js.map" />
+    <Content Include="build\js\maps\vendor-c570578c88.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,7 +161,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="build\js\app\" />
+    <Folder Include="build\js\vendor\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
