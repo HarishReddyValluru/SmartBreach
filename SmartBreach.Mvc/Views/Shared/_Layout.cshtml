@@ -15,7 +15,7 @@
 </head>
 <body>
     @RenderBody()
-    @AssetLoader.Script("vendor.js", folder: "js", fallbackCheck: "typeof angular === 'undefined'")
-    @AssetLoader.Script("app.js", folder: "js", fallbackCheck: "window.jsLoaded !== true")
+    @AssetLoader.Script("vendor.js", folder: "js/vendor", fallbackCheck: "typeof angular === 'undefined'")
+    @AssetLoader.Script("app.js", folder: "js/app", fallbackCheck: "window.jsLoaded !== true")
 </body>
 </html>
