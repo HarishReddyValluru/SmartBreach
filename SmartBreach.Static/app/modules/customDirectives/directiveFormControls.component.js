@@ -9,10 +9,14 @@
 
     function controller($scope) {
         var $ctrl = this;
-        $ctrl.name = 23;
-        $ctrl.lastName = "With template from html controller";
+        $ctrl.number1 = 23;
+        $ctrl.number2 = 3;
+
+        angular.element("[data-toggle='tooltip']").tooltip({
+            animated: 'fade',
+            placement: 'right'
+        });
 
     }
-
 
 })();

@@ -3,15 +3,15 @@
         <div class="col-lg-12">
             <table>
                 <tr>
-                    <td>First Name : </td>
+                    <td>Control using custom directive :  &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="Control using custom directive"></i></td>
                     <td>
-                        <input type="text" ng-model="$ctrl.name" smart-input-nt class="form-control" required />
+                        <input type="text" ng-model="$ctrl.number1" smart-input-nt class="form-control" required />
                     </td>
                 </tr>
                 <tr>
-                    <td>First Name : </td>
+                    <td>Custom directive that implements input control :  &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="Custom directive that implements input control"></i> </td>
                     <td>
-                        <smart-input-t send-model="$ctrl.lastName" ng-model="$ctrl.lastName"></smart-input-t>
+                        <smart-input-t send-model="$ctrl.number2"></smart-input-t>
                     </td>
                 </tr>
             </table>
@@ -19,8 +19,6 @@
         <div class="col-lg-12 text-center" style="padding-top:10px">
             <input type="submit" ng-disabled="!vm.appRegistrationForm.$valid" value="Get Form Data" class="btn btn-primary" ng-click="vm.getFormData();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-        
     </form>
-
 </div>
 
