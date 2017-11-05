@@ -21,12 +21,13 @@
             return {
                 restrict: 'EA',
                 scope: {
-                    sendModel: '='
+                    sendModel: '=',
+                    disabled:'='
                 },
                 controller: ['$scope', controller],
                 controllerAs: 'vm',
                 replace: true,
-                template: '<input type="text" ng-model="vm.sendModelValue" class="form-control" required />',
+                template: '<input type="text" ng-model="vm.sendModelValue" ng-disabled="vm.disabled" class="form-control" required />',
                 require: '?ngModel',
                 link: function (scope, element, attrs, ngModelCtrl) {
                     ngModelCtrl.$parsers.push(function (viewValue) {
@@ -39,6 +40,7 @@
             function controller($scope) {
                 var vm = this;
                 vm.sendModelValue = $scope.sendModel + "  ---  " + "Appended in directive controller";
+                vm.disabled = $scope.disabled;
             }
 
         });
