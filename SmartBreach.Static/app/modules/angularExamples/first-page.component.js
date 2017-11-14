@@ -5,10 +5,10 @@
         .module('smartbreachapp.pages')
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
-            controller: ['$scope', '$rootScope', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
+            controller: ['$scope', '$rootScope', '$sce', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
         });
 
-    function controller($scope, $rootScope, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
+    function controller($scope, $rootScope, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
         var $ctrl = this;
 
         $ctrl.$onInit = function () {
@@ -27,14 +27,14 @@
         $ctrl.htmlStringAssigned = $interpolate(htmlString)($scope);
 
         $ctrl.buttonText = "Click Me";
-        var htmlButton = "<button ng-click='clickme();'>{{$ctrl.buttonText}}</button>";
-        $ctrl.htmlButtonAssigned = $interpolate(htmlButton)($scope);
+        $ctrl.htmlButton = "<button ng-click='clickme();' class='btn btn-primary'>{{$ctrl.buttonText}}</button>";
+        $ctrl.htmlButtonAssigned = $sce.trustAsHtml($interpolate($ctrl.htmlButton)($scope));
 
         //$parse
         $ctrl.name = 'Valluru';
         $ctrl.parse = $parse('$ctrl.name')($scope);
         $parse('$ctrl.name').assign($scope, 'Harish');
-        $ctrl.parse_assign = $parse('$ctrl.name')($scope);
+        $ctrl.parse_assign = $parse('$ctrl.name')($scope); 
 
         //Browser Cache
         $scope.$watch('$ctrl.sessionStorage', function () {
