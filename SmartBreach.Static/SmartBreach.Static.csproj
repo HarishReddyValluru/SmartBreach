@@ -63,6 +63,7 @@
     <Content Include="app\common\controls\input-selector.component.html" />
     <Content Include="app\common\controls\input-selector.component.js" />
     <Content Include="app\common\directives\iconPicker.directive.js" />
+    <Content Include="app\common\directives\objectMotion.directive.js" />
     <Content Include="app\common\services\api-resource.factory.js" />
     <Content Include="app\common\services\giConstant.factory.js" />
     <Content Include="app\common\services\navigation.service.js" />
