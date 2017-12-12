@@ -19,20 +19,23 @@
                 vm.moveBottom = _moveBottom;
                 vm.currentPosition = 1;
 
-
                 vm.$onInit = function () {
                     vm.list = $scope.getObject;
                     vm.selectedItem = vm.list[0];
                 }
 
                 function _moveTop() {
-                    var pos = vm.currentPosition++;
-                    vm.selectedItem = vm.list[pos];
+                    if (vm.currentPosition < vm.list.length) {
+                        var pos = vm.currentPosition++;
+                        vm.selectedItem = vm.list[pos];
+                    }
                 }
 
                 function _moveBottom() {
-                    var pos = vm.currentPosition--;
-                    vm.selectedItem = vm.list[pos-2];
+                    if (vm.currentPosition != 1 && vm.currentPosition <= vm.list.length) {
+                        var pos = vm.currentPosition--;
+                        vm.selectedItem = vm.list[pos - 2];
+                    }
                 }
 
             }
