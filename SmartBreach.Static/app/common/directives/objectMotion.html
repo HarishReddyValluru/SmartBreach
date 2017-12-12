@@ -1,8 +1,9 @@
 ﻿<div>
-    <span style="float: left; margin-top: 3%;">Record : {{vm.selectedItem.id}}/{{vm.list.length}}</span>
+    <span style="float: left; margin-top: 2%;">Record : {{vm.selectedItem.id}}/{{vm.list.length}}</span>
 
     <div style="width:15px;float:left">
-        <i class="fa fa-caret-up fa-2x" ng-click="vm.moveTop()"></i><i class="fa fa-caret-down fa-2x" ng-click="vm.moveBottom()"></i>
+        <button class="fa fa-caret-up" ng-click="vm.moveTop()"></button>
+        <button class="fa fa-caret-down" ng-click="vm.moveBottom()"></button>
     </div>
 
     <br />
