@@ -11,13 +11,13 @@
                         '<b>This is directive template</b>&nbsp;&nbsp;&nbsp;&nbsp;' +
                           '<ng-transclude>' +
                           '</ng-transclude>' +
-                        '</div>'
+                        '</b></div>'
         }
 
         return directive;
     });
 
-    //scope: false(default)
+    //scope: false(default)     //Shared Scope
     angular
         .module('smartbreachapp.pages')
         .directive('directiveScopeFalse', function () {
@@ -32,7 +32,7 @@
             return directive;
         });
 
-    //scope: true
+    //scope: true       //Inherited Scope
     angular
         .module('smartbreachapp.pages')
         .directive('directiveScopeTrue', function () {
