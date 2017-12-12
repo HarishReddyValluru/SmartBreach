@@ -1,5 +1,5 @@
 ﻿<div>
-    <span style="float:left">Record : {{vm.selectedItem.id}}/{{vm.list.length}}</span>
+    <span style="float: left; margin-top: 3%;">Record : {{vm.selectedItem.id}}/{{vm.list.length}}</span>
 
     <div style="width:15px;float:left">
         <i class="fa fa-caret-up fa-2x" ng-click="vm.moveTop()"></i><i class="fa fa-caret-down fa-2x" ng-click="vm.moveBottom()"></i>
@@ -9,9 +9,4 @@
     &nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" ng-model="vm.selectedItem.name" />
 
-    <!--<br /><br /><br />
-
-    <ul ng-repeat="item in vm.list">
-        <li>{{item.id}}</li>
-    </ul>-->
 </div>

@@ -42,15 +42,4 @@
 
         });
 
-
-    //angular.module("smartbreachapp.templates").run(['$templateCache', function ($templateCache) {
-    //    $templateCache.put('template/scope/objectMotion.html',
-    //                '<div>' +
-    //                     '<span>Record : 2/7</span>' +
-    //                     '<i class="fa fa-arrow-up"></i>' +
-    //                     '<i class="fa fa-arrow-down"></i>' +
-    //                 '</div>'
-    //        )
-    //}]);
-
 })();
