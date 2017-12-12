@@ -26,6 +26,13 @@
                 { id: 3, first: 'John', last: 'Kimble', actor: 'Arnold' },
                 { id: 4, first: 'Ben', last: 'Richards', actor: 'Arnold' }
             ];
+
+            vm.countries = [
+                { id: 1, name: 'India' },
+                { id: 2, name: 'Japan' },
+                { id: 3, name: 'China' },
+                { id: 4, name: 'Russia' }
+            ];
         }
 
         function openModalPopup() {

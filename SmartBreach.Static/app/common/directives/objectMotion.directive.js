@@ -5,7 +5,7 @@
         .directive('objectMotion', function () {
             return {
                 restrict: 'EA',
-                template: '<div><span>Record : 2/7</span><i class="fa fa-arrow-up" ng-click="vm.moveTop()"></i><i class="fa fa-arrow-down" ng-click="vm.moveBottom()"></i></div>',
+                templateUrl: '/static/app/common/directives/objectMotion.html',
                 controller: ['$scope', controller],
                 controllerAs: 'vm',
                 scope: {
@@ -17,17 +17,22 @@
                 var vm = this;
                 vm.moveTop = _moveTop;
                 vm.moveBottom = _moveBottom;
+                vm.currentPosition = 1;
+
 
                 vm.$onInit = function () {
                     vm.list = $scope.getObject;
+                    vm.selectedItem = vm.list[0];
                 }
 
                 function _moveTop() {
-                    alert("UP");
+                    var pos = vm.currentPosition++;
+                    vm.selectedItem = vm.list[pos];
                 }
 
                 function _moveBottom() {
-                    alert("Bottom");
+                    var pos = vm.currentPosition--;
+                    vm.selectedItem = vm.list[pos-2];
                 }
 
             }
