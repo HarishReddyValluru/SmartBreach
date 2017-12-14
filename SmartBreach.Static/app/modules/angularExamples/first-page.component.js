@@ -5,11 +5,12 @@
         .module('smartbreachapp.pages')
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
-            controller: ['$scope', '$rootScope', '$sce', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
+            controller: ['$scope', '$state', '$rootScope', '$sce', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
         });
 
-    function controller($scope, $rootScope, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
+    function controller($scope, $state, $rootScope, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
         var $ctrl = this;
+        $ctrl.goToPage = goToPage;
 
         $ctrl.$onInit = function () {
             $ctrl.oneWayBindingData = "One way data passed";
@@ -20,6 +21,10 @@
             animated: 'fade',
             placement: 'right'
         });
+
+        function goToPage() {
+            $state.go('dashboard.formbuilder', { EntityName: "I am on Form Builder page" });
+        }
 
         //$interpolate
         $ctrl.htmlStringValue = "Hyderabad";
