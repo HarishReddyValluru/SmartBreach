@@ -10,6 +10,7 @@
 
     function controller($scope, $rootScope, $filter, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
         var $ctrl = this;
+        $ctrl.goToPage = goToPage;
 
         $ctrl.data = [
             { name: "Rob", hasPermission: true },
@@ -38,6 +39,10 @@
             animated: 'fade',
             placement: 'right'
         });
+
+        function goToPage() {
+            $state.go('dashboard.formbuilder', { EntityName: "I am on Form Builder page" });
+        }
 
         //$interpolate
         $ctrl.htmlStringValue = "Hyderabad";

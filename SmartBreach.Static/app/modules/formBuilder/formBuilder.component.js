@@ -6,15 +6,17 @@
         .component('dynamicFormbuilder', {
             templateUrl: '/static/app/modules/formBuilder/layout/formBuilder.html',
             controllerAs: 'vm',
-            controller: ['$scope', '$rootScope', '$window', '$cacheFactory', '$timeout', '$filter', controller]
+            controller: ['$scope', '$stateParams', '$rootScope', '$window', '$cacheFactory', '$timeout', '$filter', controller]
         });
 
-    function controller($scope, $rootScope, $window, $cacheFactory, $timeout, $filter) {
+    function controller($scope, $stateParams, $rootScope, $window, $cacheFactory, $timeout, $filter) {
 
         var vm = this;
         vm.addRow = _addRow;
         vm.removeRow = _removeRow;
         vm.getFormBuilderData = _getFormBuilderData;
+
+        toastr.success($stateParams.EntityName);
 
         vm.countries = [
             { id: 1, name: 'India' },

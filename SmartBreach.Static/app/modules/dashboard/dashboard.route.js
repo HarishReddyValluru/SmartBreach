@@ -23,7 +23,10 @@
             .state('dashboard.formbuilder',
             {
                 url: "/FormBuilder",
-                template: "<dynamic-formbuilder></dynamic-formbuilder>"
+                template: "<dynamic-formbuilder></dynamic-formbuilder>",
+                params: {
+                    EntityName: ""
+                }
             })
             .state('dashboard.formcontrols',
             {
