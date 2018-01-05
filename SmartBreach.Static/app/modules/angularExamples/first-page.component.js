@@ -5,15 +5,33 @@
         .module('smartbreachapp.pages')
         .component('angularExamples', {
             templateUrl: '/static/app/modules/angularExamples/layout/first-page.html',
-            controller: ['$scope', '$rootScope', '$sce', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
+            controller: ['$scope', '$rootScope', '$filter', '$sce', '$window', '$timeout', 'sharedProperties', '$parse', '$compile', '$interpolate', controller]
         });
 
-    function controller($scope, $rootScope, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
+    function controller($scope, $rootScope, $filter, $sce, $window, $timeout, sharedProperties, $parse, $compile, $interpolate) {
         var $ctrl = this;
+
+        $ctrl.data = [
+            { name: "Rob", hasPermission: true },
+            { name: "Colin", hasPermission: false },
+            { name: "Andy", hasPermission: true },
+            { name: "Rick", hasPermission: false },
+            { name: "David", hasPermission: true },
+        ]
+
+        //ng-bind-html
+        $ctrl.ngBindHtml = 'I am an <code>HTML</code>string with ' + '<a href="#">links!</a> and other <em>stuff</em>';
+
+        //ng-bind-template
+        $ctrl.ngBindTemplateTitle = "Maximus";
+        $ctrl.ngBindTemplateCaption = "Never Ending";
 
         $ctrl.$onInit = function () {
             $ctrl.oneWayBindingData = "One way data passed";
             $ctrl.twoWayBindingData = "Two way data passed";
+
+            $ctrl.filteredData = $filter('filter')($ctrl.data, { hasPermission: true });
+
         }
 
         angular.element("[data-toggle='tooltip']").tooltip({
@@ -101,7 +119,6 @@
 
         var b = new ClassB();
         b.print();
-
 
     };
 })();
