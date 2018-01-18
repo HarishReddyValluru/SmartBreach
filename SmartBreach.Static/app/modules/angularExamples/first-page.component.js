@@ -51,7 +51,7 @@
 
         $ctrl.buttonText = "Click Me";
         $ctrl.htmlButton = "<button ng-click='clickme();' class='btn btn-primary'>{{$ctrl.buttonText}}</button>";
-        $ctrl.htmlButtonAssigned = $sce.trustAsHtml($interpolate($ctrl.htmlButton)($scope));
+        $ctrl.htmlButtonAssigned = $sce.trustAsHtml($interpolate($ctrl.htmlButton)($scope));        //sce - Strict Contextual Escaping
 
         //$parse
         $ctrl.name = 'Valluru';

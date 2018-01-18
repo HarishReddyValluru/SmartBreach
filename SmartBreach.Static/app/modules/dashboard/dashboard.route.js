@@ -2,9 +2,13 @@
     'use strict';
 
     angular
-        .module('smartbreachapp.dashboard').config(['$stateProvider', '$urlRouterProvider', config]);
+        .module('smartbreachapp.dashboard').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', config]);
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
+
+        $locationProvider.hashPrefix('');
+
+        $urlRouterProvider.otherwise('/Dashboard');
 
         $urlRouterProvider.when('/Dashboard', '/Dashboard/SmartItems');
 
