@@ -68,6 +68,10 @@
                         <ul>
                             <li ng-repeat="x in $ctrl.filteredData">{{x.name}}</li>
                         </ul>
+                        <br />
+                        <ul>
+                            <li ng-repeat="x in $ctrl.preDefDirectives | camelCase">{{x.name}}</li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>

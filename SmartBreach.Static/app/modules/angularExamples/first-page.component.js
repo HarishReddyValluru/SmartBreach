@@ -17,7 +17,15 @@
             { name: "Colin", hasPermission: false },
             { name: "Andy", hasPermission: true },
             { name: "Rick", hasPermission: false },
-            { name: "David", hasPermission: true },
+            { name: "David", hasPermission: true }
+        ]
+
+        $ctrl.preDefDirectives = [
+            { name: "ngif" },
+            { name: "ngrepeat" },
+            { name: "ngmodule" },
+            { name: "ngapp" },
+            { name: "ngbind" }
         ]
 
         //ng-bind-html
@@ -57,7 +65,7 @@
         $ctrl.name = 'Valluru';
         $ctrl.parse = $parse('$ctrl.name')($scope);
         $parse('$ctrl.name').assign($scope, 'Harish');
-        $ctrl.parse_assign = $parse('$ctrl.name')($scope); 
+        $ctrl.parse_assign = $parse('$ctrl.name')($scope);
 
         //Browser Cache
         $scope.$watch('$ctrl.sessionStorage', function () {

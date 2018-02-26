@@ -65,6 +65,7 @@
     <Content Include="app\common\directives\iconPicker.directive.js" />
     <Content Include="app\common\directives\objectMotion.directive.js" />
     <Content Include="app\common\directives\objectMotion.html" />
+    <Content Include="app\common\filters\camelCase.filter.js" />
     <Content Include="app\common\services\api-resource.factory.js" />
     <Content Include="app\common\services\giConstant.factory.js" />
     <Content Include="app\common\services\navigation.service.js" />
