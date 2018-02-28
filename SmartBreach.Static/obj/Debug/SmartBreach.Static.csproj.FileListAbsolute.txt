@@ -4,3 +4,9 @@ C:\AON\Development\SmartBreach\SmartBreach\SmartBreach.Static\bin\SmartBreach.St
 C:\AON\Development\SmartBreach\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.dll
 C:\AON\Development\SmartBreach\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.pdb
 C:\AON\Development\SmartBreach\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.csprojResolveAssemblyReference.cache
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\bin\SmartBreach.Static.dll.config
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\bin\SmartBreach.Static.dll
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\bin\SmartBreach.Static.pdb
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.csprojResolveAssemblyReference.cache
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.dll
+C:\AON\Harish\SmartBreach 1.6\SmartBreach\SmartBreach.Static\obj\Debug\SmartBreach.Static.pdb
