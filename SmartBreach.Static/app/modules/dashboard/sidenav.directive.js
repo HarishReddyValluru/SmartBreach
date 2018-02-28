@@ -50,6 +50,8 @@
             '</div>'
             )
 
+        $templateCache.put("templateCacheValue", "Value from Template Cache");
+
     }])
 
 

@@ -4,10 +4,10 @@
     angular.module('smartbreachapp.pages').component('formControls', {
             templateUrl: '/static/app/modules/formControls/layout/formControls.html',
             controllerAs: 'vm',
-            controller: ['$q', '$scope', '$rootScope', '$window', '$cacheFactory', '$timeout', '$filter', 'formControlService', 'formControlsHttpService', 'modalConfirmService', controller]
+            controller: ['$q', '$scope', '$rootScope', '$window', '$templateCache', '$cacheFactory', '$timeout', '$filter', 'formControlService', 'formControlsHttpService', 'modalConfirmService', controller]
         });
 
-    function controller($q, $scope, $rootScope, $window, $cacheFactory, $timeout, $filter, formControlService, formControlsHttpService, modalConfirmService) {
+    function controller($q, $scope, $rootScope, $window, $templateCache, $cacheFactory, $timeout, $filter, formControlService, formControlsHttpService, modalConfirmService) {
 
         var vm = this;
         vm.mode = 'fun'; //Lets test if property name is set to Rahil
@@ -29,6 +29,7 @@
         vm.multipleCustomList = _multipleCustomList;
 
         //toastr.success("StateParam Parameter :   " + $stateParams.employeeId);
+        toastr.success("Template Cache Value :   " + $templateCache.get('templateCacheValue'));
 
         $scope.$onInit = function () {
             vm.disableStatus = !vm.registrationForm.$invalid;
